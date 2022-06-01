@@ -1,7 +1,8 @@
 import os
 import re
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request, url_for, redirect
 from dotenv import load_dotenv
+from .gmail.gmail import send_email
 
 load_dotenv()
 app = Flask(__name__)
@@ -59,12 +60,20 @@ def education():
     return render_template('education.html', schools=schools)
 
 
-@app.route('/contact')
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
-    return render_template('contact.html')
+    if request.method == 'GET':
+        return render_template('contact.html')
+    elif request.method == 'POST':
+        name = request.form.get("name")
+        email = request.form.get("email")
+        message = request.form.get("message")
+        subject = request.form.get("subject")
+        
+        send_email(name, email, subject, message)
+
+        return redirect(url_for('contact'))
 
 @app.route('/map')
 def map():
     return render_template('map.html')
-
-
