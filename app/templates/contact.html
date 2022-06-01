@@ -1,0 +1,52 @@
+{% extends "base.html" %} 
+{% block title %} Contact {% endblock %}
+{% block content %}
+<section class="hero has-jungle-bg is-fullheight">
+    <div class="hero-body ">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column has-text-centered">
+                    <p class="title is-1 has-text-white">
+                        Contact Form
+                    <h1 class="title"></h1>
+                    </p>
+                </div>
+                <div class="column">
+                    <div class="block">
+                        <div class="field">
+                            <div class="control has-icons-left">
+                                <input class="input is-large" type="text" placeholder="Name">
+                                <span class="icon is-large is-left">
+                                <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control has-icons-left">
+                                <input class="input is-large" type="text" placeholder="Email">
+                                <span class="icon is-large is-left">
+                                <i class="fas fa-envelope"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control has-icons-left">
+                                <textarea class="textarea is-large" placeholder="Message"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <div class="field is-grouped is-grouped-centered">
+                            <p class="control">
+                                <a class="button is-rounded is-large is-primary has-background-white has-text-primary-dark">
+                                Submit
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
