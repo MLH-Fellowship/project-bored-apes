@@ -1,0 +1,187 @@
+{
+    "hadi" : {
+        "name" : "Hadi Chaaban",
+        "about" : "I'm an aspiring software developer from Detroit, Michigan. In my spare time, I enjoy playing video games and making electronics.",
+        "image" : "https://media-exp1.licdn.com/dms/image/C5603AQHg8GeQlIQBKA/profile-displayphoto-shrink_800_800/0/1651090159726?e=1659571200&v=beta&t=FDrDc1ybcS05fHwMpSxAZNVPgTkdKeC803wYavua_Vk",
+        "experience": [
+            {
+                "title": "Software Developer Itern",
+                "location": "San Francisco, California",
+                "range": "May 2020 - August 2021",
+                "info": "Developed performant, scalable and highly available applications using Kotlin, Docker, Apache Ignite\nManaged infrastructure using Terraform, Jenkins, and Ansible.\nImplemented delta query APIs resulting in a 99% decrease in payload and a 32-71% decrease in latency",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Uber_logo_2018.svg/2560px-Uber_logo_2018.svg.png"
+            },
+            {
+                "title": "Software Developer Itern",
+                "location": "Redmond, Washington",
+                "range": "May 2020 - August 2021",
+                "info": "Developed performant, scalable and highly available applications using Kotlin, Docker, Apache Ignite\nManaged infrastructure using Terraform, Jenkins, and Ansible.\nImplemented delta query APIs resulting in a 99% decrease in payload and a 32-71% decrease in latency",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/2560px-Microsoft_logo_%282012%29.svg.png"
+            },
+            {
+                "title": "Software Developer Itern",
+                "location": "Mountain View, California",
+                "range": "May 2020 - August 2021",
+                "info": "Developed performant, scalable and highly available applications using Kotlin, Docker, Apache Ignite\nManaged infrastructure using Terraform, Jenkins, and Ansible.\nImplemented delta query APIs resulting in a 99% decrease in payload and a 32-71% decrease in latency",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
+            }
+        ],
+        "projects" : [
+            {
+                "title": "Formica",
+                "description": "An in-discord form service that allows you to fill in forms via a discord bot. You can create and manage forms, as well as manage your responses via a web interface.",
+                "image": "../static/media/formica.png",
+                "link": "https://github.com/felixfaisal/formica"
+            },
+            {
+                "title": "Don't Fear the Reaper!",
+                "description": "A 2D hide n' seek game, where you can play as the grim reaper where the objective is to hunt down the TBD (To Be Deceased). Or, you can play as the TBD, with a goal of escaping the reaper's catacombs before he finds you.",
+                "image": "../static/media/reaper.png",
+                "link": "https://github.com/n-maido/dont-fear-the-reaper"
+            },
+            {
+                "title": "The Education Game",
+                "description": "An educational game for children with autism, intended to improve their development in 3 skill areas: arithmetic, emotion recognition, and fine motor skills.",
+                "image": "../static/media/education.jpg",
+                "link": "https://github.com/n-maido/the-education-game"
+            }
+        ],
+        "social" : [
+            {
+                "name" : "LinkedIn",
+                "val" : "https://www.linkedin.com/in/nhimaido/"
+            },
+            {
+                "name" : "GitHub",
+                "val" : "https://github.com/n-maido"
+            },
+            {
+                "name" : "nhi_maido@outlook.com"
+            }
+        ]
+    },
+
+    "logan" : {
+        "name" : "Logan Hoogendijk",
+        "about" : "I'm an aspiring software developer from Ontario, Canada. In my spare time, I enjoy playing video games and making electronics.",
+        "image" : "",
+        "experience": [
+            {
+                "title": "Software Developer Itern",
+                "location": "San Francisco, California",
+                "range": "May 2020 - August 2021",
+                "info": "Developed performant, scalable and highly available applications using Kotlin, Docker, Apache Ignite\nManaged infrastructure using Terraform, Jenkins, and Ansible.\nImplemented delta query APIs resulting in a 99% decrease in payload and a 32-71% decrease in latency",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Uber_logo_2018.svg/2560px-Uber_logo_2018.svg.png"
+            },
+            {
+                "title": "Software Developer Itern",
+                "location": "Redmond, Washington",
+                "range": "May 2020 - August 2021",
+                "info": "Developed performant, scalable and highly available applications using Kotlin, Docker, Apache Ignite\nManaged infrastructure using Terraform, Jenkins, and Ansible.\nImplemented delta query APIs resulting in a 99% decrease in payload and a 32-71% decrease in latency",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/2560px-Microsoft_logo_%282012%29.svg.png"
+            },
+            {
+                "title": "Software Developer Itern",
+                "location": "Mountain View, California",
+                "range": "May 2020 - August 2021",
+                "info": "Developed performant, scalable and highly available applications using Kotlin, Docker, Apache Ignite\nManaged infrastructure using Terraform, Jenkins, and Ansible.\nImplemented delta query APIs resulting in a 99% decrease in payload and a 32-71% decrease in latency",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
+            }
+        ],
+        "projects" : [
+            {
+                "title": "Formica",
+                "description": "An in-discord form service that allows you to fill in forms via a discord bot. You can create and manage forms, as well as manage your responses via a web interface.",
+                "image": "../static/media/formica.png",
+                "link": "https://github.com/felixfaisal/formica"
+            },
+            {
+                "title": "Don't Fear the Reaper!",
+                "description": "A 2D hide n' seek game, where you can play as the grim reaper where the objective is to hunt down the TBD (To Be Deceased). Or, you can play as the TBD, with a goal of escaping the reaper's catacombs before he finds you.",
+                "image": "../static/media/reaper.png",
+                "link": "https://github.com/n-maido/dont-fear-the-reaper"
+            },
+            {
+                "title": "The Education Game",
+                "description": "An educational game for children with autism, intended to improve their development in 3 skill areas: arithmetic, emotion recognition, and fine motor skills.",
+                "image": "../static/media/education.jpg",
+                "link": "https://github.com/n-maido/the-education-game"
+            }
+        ],
+        "social" : [
+            {
+                "name" : "LinkedIn",
+                "val" : "https://www.linkedin.com/in/nhimaido/"
+            },
+            {
+                "name" : "GitHub",
+                "val" : "https://github.com/n-maido"
+            },
+            {
+                "name" : "nhi_maido@outlook.com"
+            }
+        ]
+    },
+
+    "justin" : {
+        "name" : "Justin Monteza",
+        "about" : "I'm an aspiring software developer from (not) Detroit, Michigan. In my spare time, I enjoy playing video games and making electronics.",
+        "image" : "",
+        "experience": [
+            {
+                "title": "Software Developer Itern",
+                "location": "San Francisco, California",
+                "range": "May 2020 - August 2021",
+                "info": "Developed performant, scalable and highly available applications using Kotlin, Docker, Apache Ignite\nManaged infrastructure using Terraform, Jenkins, and Ansible.\nImplemented delta query APIs resulting in a 99% decrease in payload and a 32-71% decrease in latency",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Uber_logo_2018.svg/2560px-Uber_logo_2018.svg.png"
+            },
+            {
+                "title": "Software Developer Itern",
+                "location": "Redmond, Washington",
+                "range": "May 2020 - August 2021",
+                "info": "Developed performant, scalable and highly available applications using Kotlin, Docker, Apache Ignite\nManaged infrastructure using Terraform, Jenkins, and Ansible.\nImplemented delta query APIs resulting in a 99% decrease in payload and a 32-71% decrease in latency",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/2560px-Microsoft_logo_%282012%29.svg.png"
+            },
+            {
+                "title": "Software Developer Itern",
+                "location": "Mountain View, California",
+                "range": "May 2020 - August 2021",
+                "info": "Developed performant, scalable and highly available applications using Kotlin, Docker, Apache Ignite\nManaged infrastructure using Terraform, Jenkins, and Ansible.\nImplemented delta query APIs resulting in a 99% decrease in payload and a 32-71% decrease in latency",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
+            }
+        ],
+        "projects" : [
+            {
+                "title": "Formica",
+                "description": "An in-discord form service that allows you to fill in forms via a discord bot. You can create and manage forms, as well as manage your responses via a web interface.",
+                "image": "../static/media/formica.png",
+                "link": "https://github.com/felixfaisal/formica"
+            },
+            {
+                "title": "Don't Fear the Reaper!",
+                "description": "A 2D hide n' seek game, where you can play as the grim reaper where the objective is to hunt down the TBD (To Be Deceased). Or, you can play as the TBD, with a goal of escaping the reaper's catacombs before he finds you.",
+                "image": "../static/media/reaper.png",
+                "link": "https://github.com/n-maido/dont-fear-the-reaper"
+            },
+            {
+                "title": "The Education Game",
+                "description": "An educational game for children with autism, intended to improve their development in 3 skill areas: arithmetic, emotion recognition, and fine motor skills.",
+                "image": "../static/media/education.jpg",
+                "link": "https://github.com/n-maido/the-education-game"
+            }
+        ],
+        "social" : [
+            {
+                "name" : "LinkedIn",
+                "val" : "https://www.linkedin.com/in/nhimaido/"
+            },
+            {
+                "name" : "GitHub",
+                "val" : "https://github.com/n-maido"
+            },
+            {
+                "name" : "nhi_maido@outlook.com"
+            }
+        ]
+    }
+}

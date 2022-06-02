@@ -1,40 +1,390 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta property="og:title" content="Personal Portfolio">
-    <meta property="og:description" content="My Personal Portfolio">
-    <meta property="og:url" content="{{ url }}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="styles.css">
 
-    <link lang='sass' rel="stylesheet" href="./static/styles/main.css">
-    <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
-    <title>{{ title }}</title>
 </head>
 
 <body>
-    <header class="nav-bar">
-        <div class="nav-content">
-            <a href="/">
-                <div class="nav-logo">
-                    <img src="./static/img/logo.svg" />
-                </div>
-            </a>
-        </div>
-    </header>
 
-    <div class="profile">
-        <div id="profile-picture" class="profile-picture">
-            <img src="./static/img/logo.jpg">
-        </div>
-        <h1>{{ title }}</h1>
+
+  <!--Navbar start-->
+  <nav class="navbar" role="navigation" aria-label="main navigation" id="topnavbar">
+    <div class="navbar-brand">
+      <h1></h1>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        {% for person in data %}
+        <a class="navbar-item" href={{ person }}>
+          {{ data[person]["name"] }}
+        </a>
+        {% endfor %}
+
+      </div>
+    </div>
+    <div class="navbar-end">
+    </div>
+    </div>
+  </nav>
+  <button class="button" onclick="show_hide()" >Arrow</button>
+  <script src = " {{ url_for('static', filename='js/arrow.js') }}"></script>
+  <!--Navbar end-->
+
+  <section class="hero has-jungle-bg is-fullheight">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+
+        <div class="columns">
+
+          <!-- start card -->
+
+          {% for experience in data[title]['experience'] %}
+          <div class="column">
+            
+
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title title is-4">
+                  {{ experience['location'] }}
+                </p>
+              </header>
+              <div class="card-content">
+                <!-- <figure class="image is-256x256"> -->
+                <img
+                  src= {{ experience['image'] }}
+                  class="same-size">
+                <!-- </figure> -->
+
+                <p class="title">
+                  {{ experience['title'] }}
+                </p>
+                <p class="subtitle">
+                  {{ experience['range'] }}
+                </p>
+                <p></p>
+
+                <ul>
+                  <li>{{ experience['info'] }}</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <!-- card end -->
+          {% endfor %}
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hero has-nft-bg is-fullheight">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title is-1 is-uppercase has-text-white green-outlined">Education</h1>
+
+        <div class="block">
+
+
+
+          <div class="card">
+            <div class="card-content">
+
+              <div class="columns is-gapless is-vcentered is-centered">
+                <div class="column">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/University_of_Alberta_Logo_%282021%29.svg/2560px-University_of_Alberta_Logo_%282021%29.svg.png"
+                    width="300" height="300">
+                  <h1 class="title is-1">Bachelor of Science</h1>
+                  <h1 class="subtitle is-3">Computing Science & Economics</h1>
+
+                  <div class="block">
+                    <h1 class="title is-6">Favourite Courses</h1>
+                    <div class="tags is-centered">
+                      <span class="tag is-large is-danger is-rounded">Computer Networks</span>
+                      <span class="tag is-large is-danger is-rounded">
+                        Database Management Systems</span>
+                      <span class="tag is-large is-danger is-rounded">Operating System Concepts</span>
+                    </div>
+                  </div>
+
+                </div>
+
+
+                <div class="column">
+                  <figure class="image">
+                    <img
+                      src="https://www.ualberta.ca/external-relations/media-library/community-relations/photos/12784-06-115-athabasca02.png" />
+                  </figure>
+
+
+                </div>
+              </div>
+
+
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="block">
+
+
+
+          <div class="card">
+            <div class="card-content">
+
+              <div class="columns is-gapless is-vcentered is-centered">
+                <div class="column">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/QueensU_Wordmark.svg/2560px-QueensU_Wordmark.svg.png"
+                    width="300" height="300">
+                  <h1 class="title is-1">Bachelor of Computing (Honours) - BCPH</h1>
+
+
+                  <div class="block">
+                    <h1 class="title is-6">Favourite Courses</h1>
+                    <div class="tags is-centered">
+                      <span class="tag is-large is-danger is-rounded">Computer Networks</span>
+                      <span class="tag is-large is-danger is-rounded">
+                        Database Management Systems</span>
+                      <span class="tag is-large is-danger is-rounded">Operating System Concepts</span>
+                    </div>
+                  </div>
+
+
+                </div>
+                <div class="column">
+                  <figure class="image">
+                    <img
+                      src="https://www.queensu.ca/admission/sites/default/files/assets/20200923_220147458_iOS_1.jpg" />
+                  </figure>
+
+
+                </div>
+              </div>
+
+
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <div id="map" style="width: 100%; height: 100%; position: relative;"></div>
+
+  <!-- <section class="hero has-jungle-bg is-fullheight">
+ <div class="hero-body">
+
+<div class="container has-text-centered">
+     <h1 class="title is-1 has-text-white">Map</h1>
+
+
+</div>
+
+  </div>
+</section>  -->
+
+
+  <section class="hero has-jungle-bg is-fullheight">
+    <div class="hero-body ">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column has-text-centered">
+            <p class="title is-1 has-text-white">
+              Contact Form
+              <h1 class="title"></h1>
+            </p>
+          </div>
+
+
+          <div class="column">
+
+            <div class="block">
+
+              <div class="field">
+                <div class="control has-icons-left">
+                  <input class="input is-large" type="text" placeholder="Name">
+                  <span class="icon is-large is-left">
+                    <i class="fas fa-user"></i>
+                  </span>
+                </div>
+              </div>
+
+              <div class="field">
+                <div class="control has-icons-left">
+                  <input class="input is-large" type="text" placeholder="Email">
+                  <span class="icon is-large is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                </div>
+              </div>
+
+              <div class="field">
+                <div class="control has-icons-left">
+                  <textarea class="textarea is-large" placeholder="Message"></textarea>
+
+
+                </div>
+              </div>
+
+            </div>
+
+            <div class="block">
+
+
+              <div class="field is-grouped is-grouped-centered">
+                <p class="control">
+                  <a class="button is-rounded is-large is-primary has-background-white has-text-primary-dark">
+                    Submit
+                  </a>
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+
+      <div class="block">
+
+
+        <buttons>
+          <button class="button is-large">
+            <span class="icon is-medium">
+              <i class="fab fa-github"></i>
+            </span>
+            <span>GitHub</span>
+          </button>
+
+          <button class="button is-large">
+            <span class="icon is-medium">
+              <i class="fab fa-linkedin"></i>
+            </span>
+            <span>LinkedIn</span>
+          </button>
+
+
+          <button class="button is-large">
+            <span class="icon is-medium">
+              <i class="fas fa-link"></i>
+            </span>
+            <span>Portfolio</span>
+          </button>
+        </buttons>
+
+      </div>
+
+      <div class="block">
+
+        <strong>
+          <p>
+            Bored Apes Portfolio (MLH Fellowship Orientation Hackathon Summer 2022)
+          </p>
+        </strong>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+  <script src="https://kit.fontawesome.com/1dcdba3ff6.js" crossorigin="anonymous"></script>
+
+
+
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAt4EkwGj2-VGm0Kw3VF-0-5EpKveUAXAA&callback=initMap&libraries=&v=weekly"
+    async>
+  </script>
+
+  <script>
+    // Initialize and add the map
+    function initMap() {
+
+      // The location of Geeksforgeeks office
+      const myLatLng = {
+        lat: -25.363,
+        lng: 131.044
+      };
+
+      const edmonton = {
+        lat: 53.631611,
+        lng: -113.490112
+      };
+
+      const newYork = {
+        lat: 40.730610,
+        lng: -73.935242
+      };
+
+      // Create the map, centered at gfg_office
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 3,
+        center: edmonton,
+      });
+
+      new google.maps.Marker({
+        position: myLatLng,
+        map,
+        title: "Hello World!",
+      });
+
+      new google.maps.Marker({
+        position: edmonton,
+        map,
+        title: "Hello World!",
+      });
+
+      new google.maps.Marker({
+        position: newYork,
+        map,
+        title: "Hello World!",
+      });
+
+
+    }
+  </script>
+
+
+
+
 </body>
+
 </html>
