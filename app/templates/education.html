@@ -1,0 +1,41 @@
+{% extends "base.html" %} 
+{% block title %} Education {% endblock %}
+{% block content %}
+<section class="hero has-nft-bg is-fullheight">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title is-1 is-uppercase has-text-white">Education</h1>
+            {% for school in schools %}
+            <div class="block">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="columns is-gapless is-vcentered is-centered">
+                            <div class="column">
+                                <img src="{{school.logo}}" width="300" height="300">
+                                <h1 class="title is-1">{{school.degree}}</h1>
+                                <h1 class="subtitle is-3">{{school.course}}</h1>
+                                <div class="block">
+                                    <h1 class="title is-6">Favourite Courses</h1>
+                                    <div class="tags is-centered">
+                                        {% for favourite in school.favourites %}
+                                        <span class="tag is-large is-danger is-rounded">{{favourite}}</span>
+                                        {% endfor %}
+                                    </div>
+
+                            
+                                </div>
+                            </div>
+                            <div class="column">
+                                <figure class="image">
+                                    <img src="{{school.campus}}" />
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
