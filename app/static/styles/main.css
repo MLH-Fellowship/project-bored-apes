@@ -95,3 +95,17 @@ body {
     font-size: 50px;
     font-weight: 700;
 }
+
+.has-hobbies-bg {
+    background: url("../img/bg.jpg") center center;
+    background-size: cover;
+}
+
+.blue-outlined {
+    color: lightgray;
+    text-shadow:
+        -1px -1px 0 darkcyan,
+        1px -1px 0 darkcyan,
+        -1px 1px 0 darkcyan,
+        1px 1px 0 darkcyan;
+}
