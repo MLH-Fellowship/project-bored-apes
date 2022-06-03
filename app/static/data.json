@@ -5,7 +5,7 @@
         "image" : "https://media-exp1.licdn.com/dms/image/C5603AQHg8GeQlIQBKA/profile-displayphoto-shrink_800_800/0/1651090159726?e=1659571200&v=beta&t=FDrDc1ybcS05fHwMpSxAZNVPgTkdKeC803wYavua_Vk",
         "experience": [
             {
-                "title": "Software Developer Itern",
+                "title": "Hadi",
                 "location": "San Francisco, California",
                 "range": "May 2020 - August 2021",
                 "info": "Developed performant, scalable and highly available applications using Kotlin, Docker, Apache Ignite\nManaged infrastructure using Terraform, Jenkins, and Ansible.\nImplemented delta query APIs resulting in a 99% decrease in payload and a 32-71% decrease in latency",

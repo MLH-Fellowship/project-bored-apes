@@ -7,7 +7,9 @@
 
   <title>Portfolio</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <link rel="stylesheet" href="{{url_for('static', filename='styles/main.css')}}">
+        <link rel="icon" href="{{url_for('static', filename='img/favicon.ico')}}" type='image/x-icon'>
 
 </head>
 
@@ -27,9 +29,10 @@
     </div>
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
-        {% for person in data %}
-        <a class="navbar-item" href={{ person }}>
-          {{ data[person]["name"] }}
+        {% for person in lst %}
+        <a class="navbar-item" href="#education">
+          {{person}}
+        
         </a>
         {% endfor %}
 
@@ -39,17 +42,78 @@
     </div>
     </div>
   </nav>
-  <button class="button" onclick="show_hide()" >Arrow</button>
+
+
+  <!-- <button class="button" onclick="show_hide()" >Arrow</button> -->
   <script src = " {{ url_for('static', filename='js/arrow.js') }}"></script>
   <!--Navbar end-->
+
+    <section class="hero has-jungle-bg is-fullheight">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+
+        <h1 class="title is-1 is-uppercase has-text-white green-outlined">Team</h1>
+
+        <div class="columns">
+          <!-- <h1 class="title has-text-white">{{title}}</h1> -->
+          <!-- start card -->
+
+          {% for experience in data[title]['experience'] %}
+          <div class="column">
+            
+            <a href="/logan">
+
+         
+
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title title is-4">
+                 Hadi
+                </p>
+              </header>
+              <div class="card-content">
+                <!-- <figure class="image is-256x256"> -->
+                <img
+                  src= "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  class="same-size">
+                <!-- </figure> -->
+
+                <p class="title">
+                  {{ experience['title'] }}
+                </p>
+                <p class="subtitle">
+                  {{ experience['range'] }}
+                </p>
+                <p></p>
+
+                <ul>
+                  <li>{{ experience['info'] }}</li>
+                </ul>
+              </div>
+            </div>
+
+   </a>
+
+
+          </div>
+          <!-- card end -->
+          {% endfor %}
+
+      </div>
+    </div>
+  </section>
+
 
   <section class="hero has-jungle-bg is-fullheight">
     <div class="hero-body">
       <div class="container has-text-centered">
 
-        <div class="columns">
+           <h1 class="title is-1 is-uppercase has-text-white green-outlined">Work Experiences</h1>
 
+        <div class="columns">
+          <!-- <h1 class="title has-text-white">{{title}}</h1> -->
           <!-- start card -->
+     
 
           {% for experience in data[title]['experience'] %}
           <div class="column">
@@ -64,7 +128,7 @@
               <div class="card-content">
                 <!-- <figure class="image is-256x256"> -->
                 <img
-                  src= {{ experience['image'] }}
+                  src= "{{ experience['image']}}"
                   class="same-size">
                 <!-- </figure> -->
 
@@ -94,7 +158,7 @@
   <section class="hero has-nft-bg is-fullheight">
     <div class="hero-body">
       <div class="container has-text-centered">
-        <h1 class="title is-1 is-uppercase has-text-white green-outlined">Education</h1>
+        <h1 id="education" class="title is-1 is-uppercase has-text-white green-outlined">Education</h1>
 
         <div class="block">
 
