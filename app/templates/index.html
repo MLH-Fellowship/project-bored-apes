@@ -7,51 +7,44 @@
 
   <title>Portfolio</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <script src="https://kit.fontawesome.com/6f97194b39.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../static/styles/main.css">
 
 </head>
-<body>
 
-  
-
-
+<body class="has-background-info">
   <!--Navbar start-->
-  <nav class="navbar" role="navigation" aria-label="main navigation" id="topnavbar">
-    <div class="navbar-brand">
-      <h1></h1>
-
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        {% for person in data %}
-        <a class="navbar-item" href={{ person }}>
-          {{ data[person]["name"] }}
+  <nav class="navbar" id="grnav">
+    <div class="navbar-menu">
+        <div class="navbar-start" id="topnavbar">
+          {% for person in data %}
+          <a class="navbar-item" href={{ person }}>
+            {{ data[person]["name"] }}
+          </a>
+          {% endfor %}
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item">
+          <p id="btnarrow" onclick="show_hide()" padding="50px">
+            <span class='icon'>
+              <i class='fa-solid fa-angle-up'></i>
+            </span>
+          </p>
+          <script src=" {{ url_for('static', filename='js/arrow.js') }}"></script>
         </a>
-        {% endfor %}
-
+        <a class="navbar-item"></a>
       </div>
     </div>
-    <div class="navbar-end">
-    </div>
-    </div>
   </nav>
-  <button class="button" onclick="show_hide()" >Arrow</button>
-  <script src = " {{ url_for('static', filename='js/arrow.js') }}"></script>
   <!--Navbar end-->
+  <div class="column"></div>
 
   <div class="columns">
     <div class="column"></div>
     <div class="column">
       <div class="box">
         <p class="title is-5"> {{ data[title]['name'] }} </p>
-        <img
-        src= {{ data[title]['image'] }}
-        class="same-size">
+        <img src={{ data[title]['image'] }} class="same-size">
       </div>
     </div>
     <div class="column is-narrow">
@@ -64,6 +57,7 @@
   </div>
 
 
+
   <section class="hero has-jungle-bg is-fullheight">
     <div class="hero-body">
       <div class="container has-text-centered">
@@ -74,7 +68,7 @@
 
           {% for experience in data[title]['experience'] %}
           <div class="column">
-            
+
 
             <div class="card">
               <header class="card-header">
@@ -84,9 +78,7 @@
               </header>
               <div class="card-content">
                 <!-- <figure class="image is-256x256"> -->
-                <img
-                  src= {{ experience['image'] }}
-                  class="same-size">
+                <img src={{ experience['image'] }} class="same-size">
                 <!-- </figure> -->
 
                 <p class="title">
@@ -107,8 +99,8 @@
           <!-- card end -->
           {% endfor %}
 
+        </div>
       </div>
-    </div>
   </section>
 
   <!-- EDUCATION START-->
@@ -120,59 +112,59 @@
         {% for school in data[title]['schools'] %}
         <div class="block">
           <div class="card">
-              <div class="card-content">
-                  <div class="columns is-gapless is-vcentered is-centered">
-                      <div class="column">
-                          <img src="{{school.logo}}" width="300" height="300">
-                          <h1 class="title is-1">{{school.degree}}</h1>
-                          <h1 class="subtitle is-3">{{school.course}}</h1>
-                          <div class="block">
-                              <h1 class="title is-6">Favourite Courses</h1>
-                              <div class="tags is-centered">
-                                  {% for favourite in school.favourites %}
-                                  <span class="tag is-large is-danger is-rounded">{{favourite}}</span>
-                                  {% endfor %}
-                              </div>
-                          </div>
-                      </div>
-                      <div class="column">
-                          <figure class="image">
-                              <img src="{{school.campus}}" />
-                          </figure>
-                      </div>
+            <div class="card-content">
+              <div class="columns is-gapless is-vcentered is-centered">
+                <div class="column">
+                  <img src="{{school.logo}}" width="300" height="300">
+                  <h1 class="title is-1">{{school.degree}}</h1>
+                  <h1 class="subtitle is-3">{{school.course}}</h1>
+                  <div class="block">
+                    <h1 class="title is-6">Favourite Courses</h1>
+                    <div class="tags is-centered">
+                      {% for favourite in school.favourites %}
+                      <span class="tag is-large is-danger is-rounded">{{favourite}}</span>
+                      {% endfor %}
+                    </div>
                   </div>
+                </div>
+                <div class="column">
+                  <figure class="image">
+                    <img src="{{school.campus}}" />
+                  </figure>
+                </div>
               </div>
+            </div>
           </div>
+        </div>
+        {% endfor %}
       </div>
-      {% endfor %}
-  </div>
-</div>
-</section>
-  
+    </div>
+  </section>
+
   <section class="hero has-hobbies-bg is-fullheight">
     <div class="hero-body">
-        <div class="container has-text-centered">
-            <h1 class="title is-1 is-uppercase blue-outlined">Hobbies</h1>
-            <div class="columns">
-                {% for hobbies in data[title]['hobbies'] %}
-                <div class="column">
-                    <div class="card">
-                        <div class="card-content">
-                            <figure class="image is-3by2">
-                                <img src={{ hobbies['image'] }}>
-                            </figure>
-                            <br/>
-                            <p class="title">
-                                {{hobbies['hobby']}}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
+      <div class="container has-text-centered">
+        <h1 class="title is-1 is-uppercase blue-outlined">Hobbies</h1>
+        <div class="columns">
+          {% for hobbies in data[title]['hobbies'] %}
+          <div class="column">
+            <div class="card">
+              <div class="card-content">
+                <figure class="image is-3by2">
+                  <img src={{ hobbies['image'] }}>
+                </figure>
+                <br />
+                <p class="title">
+                  {{hobbies['hobby']}}
+                </p>
+              </div>
             </div>
+          </div>
+          {% endfor %}
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
 
   <div id="map" style="width: 100%; height: 100%; position: relative;"></div>
