@@ -93,7 +93,7 @@
     "logan" : {
         "name" : "Logan Hoogendijk",
         "about" : "I'm an aspiring software developer from Ontario, Canada. In my spare time, I enjoy playing video games and making electronics.",
-        "image" : "",
+        "image" : "https://media-exp1.licdn.com/dms/image/C4D03AQH8dG-yJOickw/profile-displayphoto-shrink_200_200/0/1643664093544?e=1659571200&v=beta&t=Sfa6xnpZ129ObXbxwCG-VYBw305sikll4wKkPlyTw3U",
         "experience": [
             {
                 "title": "Software Developer Itern",
@@ -121,19 +121,19 @@
             {
                 "title": "Formica",
                 "description": "An in-discord form service that allows you to fill in forms via a discord bot. You can create and manage forms, as well as manage your responses via a web interface.",
-                "image": "../static/media/formica.png",
+                "image": "http://droplr.com/wp-content/uploads/2020/09/discord-bots-e1635362784159.png",
                 "link": "https://github.com/felixfaisal/formica"
             },
             {
                 "title": "Don't Fear the Reaper!",
                 "description": "A 2D hide n' seek game, where you can play as the grim reaper where the objective is to hunt down the TBD (To Be Deceased). Or, you can play as the TBD, with a goal of escaping the reaper's catacombs before he finds you.",
-                "image": "../static/media/reaper.png",
+                "image": "http://droplr.com/wp-content/uploads/2020/09/discord-bots-e1635362784159.png",
                 "link": "https://github.com/n-maido/dont-fear-the-reaper"
             },
             {
                 "title": "The Education Game",
                 "description": "An educational game for children with autism, intended to improve their development in 3 skill areas: arithmetic, emotion recognition, and fine motor skills.",
-                "image": "../static/media/education.jpg",
+                "image": "http://droplr.com/wp-content/uploads/2020/09/discord-bots-e1635362784159.png",
                 "link": "https://github.com/n-maido/the-education-game"
             }
         ],
@@ -213,19 +213,19 @@
             {
                 "title": "Formica",
                 "description": "An in-discord form service that allows you to fill in forms via a discord bot. You can create and manage forms, as well as manage your responses via a web interface.",
-                "image": "../static/media/formica.png",
+                "image": "http://droplr.com/wp-content/uploads/2020/09/discord-bots-e1635362784159.png",
                 "link": "https://github.com/felixfaisal/formica"
             },
             {
                 "title": "Don't Fear the Reaper!",
                 "description": "A 2D hide n' seek game, where you can play as the grim reaper where the objective is to hunt down the TBD (To Be Deceased). Or, you can play as the TBD, with a goal of escaping the reaper's catacombs before he finds you.",
-                "image": "../static/media/reaper.png",
+                "image": "http://droplr.com/wp-content/uploads/2020/09/discord-bots-e1635362784159.png",
                 "link": "https://github.com/n-maido/dont-fear-the-reaper"
             },
             {
                 "title": "The Education Game",
                 "description": "An educational game for children with autism, intended to improve their development in 3 skill areas: arithmetic, emotion recognition, and fine motor skills.",
-                "image": "../static/media/education.jpg",
+                "image": "http://droplr.com/wp-content/uploads/2020/09/discord-bots-e1635362784159.png",
                 "link": "https://github.com/n-maido/the-education-game"
             }
         ],

@@ -47,30 +47,27 @@
   <!--Navbar end-->
   
 
-
-
-
-
-
-      <section class="hero has-background-info is-medium p-6">
+  <section class="hero has-background-info is-medium p-6">
     <div class="hero-body p-6">
       <div class="container is-fluid has-text-centered p-6">
           <div class="columns">
-    <div class="column is-one-third" class="has-background-white about-column">
-      <div class="box about">
-        <p class="title is-5"> {{ data[title]['name'] }} </p>
-        <img src={{ data[title]['image'] }} class="same-size">
+            <div class="column is-one-third" class="has-background-white about-column">
+              <div class="box about">
+                <p class="title is-5"> {{ data[title]['name'] }} </p>
+                <img src={{ data[title]['image'] }} class="same-size">      
+              </div>
+            </div>
+          <div class="column" class="has-background-white about-column">
+            <div class="box about">
+              <p class="title is-5">About Me</p>
+              <p class="subtitle">{{ data[title]['about'] }}</p>
+            </div>
+          </div>
       </div>
     </div>
-    <div class="column" class="has-background-white about-column">
-      <div class="box about">
-        <p class="title is-5">About Me</p>
-        <p class="subtitle">{{ data[title]['about'] }}</p>
-      </div>
-    </div>
-  </div>
-      </div>
   </section>
+  
+
   
   
   <section class="hero has-jungle-bg is-fullheight">
