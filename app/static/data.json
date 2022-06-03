@@ -58,6 +58,35 @@
             {
                 "name" : "nhi_maido@outlook.com"
             }
+        ],
+        "schools" : [
+            {
+                "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/University_of_Alberta_Logo_%282021%29.svg/2560px-University_of_Alberta_Logo_%282021%29.svg.png",
+                "degree": "Bachelor of Science",
+                "course": "Computing Science & Economics",
+                "favourites": ["Computer Networks", "Database Management Systems", "Operating System Concepts"],
+                "campus": "https://www.ualberta.ca/external-relations/media-library/community-relations/photos/12784-06-115-athabasca02.png"
+            }, 
+            {
+                "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/QueensU_Wordmark.svg/2560px-QueensU_Wordmark.svg.png",
+                "degree": "Bachelor of Computing (Honours) - BCPH",
+                "course": "Computer Science",
+                "favourites": ["Artificial Intelligence", "Database Management Systems", "Operating System Concepts"],
+                "campus": "https://www.queensu.ca/admission/sites/default/files/assets/20200923_220147458_iOS_1.jpg"
+            }
+        ],
+        "hobbies": [
+            {
+                "image": "https://media.timeout.com/images/105863223/750/422/image.jpg",
+                "hobby": "Star Wars"
+            }, {
+                "image": "https://hips.hearstapps.com/amv-prod-gp.s3.amazonaws.com/gearpatrol/wp-content/uploads/2019/11/Mechanical-Keyboard-Buying-Guide-Gear-Patrol-Feature.jpg?crop=1xw:0.65xh;center,top&resize=1200:*",
+                "hobby": "Mechanical Keyboards"
+            }, {
+                "image": "https://assets-prd.ignimgs.com/2021/12/30/36190303-image-7-1640880187142.png",
+                "hobby": "Video Games"
+            }
+            
         ]
     },
 
@@ -120,7 +149,37 @@
             {
                 "name" : "nhi_maido@outlook.com"
             }
+        ], 
+        "schools" : [
+            {
+                "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/University_of_Alberta_Logo_%282021%29.svg/2560px-University_of_Alberta_Logo_%282021%29.svg.png",
+                "degree": "Bachelor of Science",
+                "course": "Computing Science & Economics",
+                "favourites": ["Computer Networks", "Database Management Systems", "Operating System Concepts"],
+                "campus": "https://www.ualberta.ca/external-relations/media-library/community-relations/photos/12784-06-115-athabasca02.png"
+            }, 
+            {
+                "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/QueensU_Wordmark.svg/2560px-QueensU_Wordmark.svg.png",
+                "degree": "Bachelor of Computing (Honours) - BCPH",
+                "course": "Computer Science",
+                "favourites": ["Artificial Intelligence", "Database Management Systems", "Operating System Concepts"],
+                "campus": "https://www.queensu.ca/admission/sites/default/files/assets/20200923_220147458_iOS_1.jpg"
+            }
+        ],
+        "hobbies": [
+            {
+                "image": "https://media.timeout.com/images/105863223/750/422/image.jpg",
+                "hobby": "Star Wars"
+            }, {
+                "image": "https://hips.hearstapps.com/amv-prod-gp.s3.amazonaws.com/gearpatrol/wp-content/uploads/2019/11/Mechanical-Keyboard-Buying-Guide-Gear-Patrol-Feature.jpg?crop=1xw:0.65xh;center,top&resize=1200:*",
+                "hobby": "Mechanical Keyboards"
+            }, {
+                "image": "https://assets-prd.ignimgs.com/2021/12/30/36190303-image-7-1640880187142.png",
+                "hobby": "Video Games"
+            }
+            
         ]
+        
     },
 
     "justin" : {
@@ -182,6 +241,35 @@
             {
                 "name" : "nhi_maido@outlook.com"
             }
+        ],
+        "schools" : [
+            {
+                "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/University_of_Alberta_Logo_%282021%29.svg/2560px-University_of_Alberta_Logo_%282021%29.svg.png",
+                "degree": "Bachelor of Science",
+                "course": "Computing Science & Economics",
+                "favourites": ["Computer Networks", "Database Management Systems", "Operating System Concepts"],
+                "campus": "https://www.ualberta.ca/external-relations/media-library/community-relations/photos/12784-06-115-athabasca02.png"
+            }, 
+            {
+                "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/QueensU_Wordmark.svg/2560px-QueensU_Wordmark.svg.png",
+                "degree": "Bachelor of Computing (Honours) - BCPH",
+                "course": "Computer Science",
+                "favourites": ["Artificial Intelligence", "Database Management Systems", "Operating System Concepts"],
+                "campus": "https://www.queensu.ca/admission/sites/default/files/assets/20200923_220147458_iOS_1.jpg"
+            }
+        ],
+        "hobbies": [
+            {
+                "image": "https://media.timeout.com/images/105863223/750/422/image.jpg",
+                "hobby": "Star Wars"
+            }, {
+                "image": "https://hips.hearstapps.com/amv-prod-gp.s3.amazonaws.com/gearpatrol/wp-content/uploads/2019/11/Mechanical-Keyboard-Buying-Guide-Gear-Patrol-Feature.jpg?crop=1xw:0.65xh;center,top&resize=1200:*",
+                "hobby": "Mechanical Keyboards"
+            }, {
+                "image": "https://assets-prd.ignimgs.com/2021/12/30/36190303-image-7-1640880187142.png",
+                "hobby": "Video Games"
+            }
+            
         ]
     }
 }

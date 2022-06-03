@@ -1,7 +1,9 @@
 import os
+import re
 import json
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for, redirect
 from dotenv import load_dotenv
+from .gmail.gmail import send_email
 
 load_dotenv()
 app = Flask(__name__)
