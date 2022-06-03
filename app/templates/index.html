@@ -156,10 +156,51 @@
     </div>
   </section>
 
+  <section class="hero has-background-info is-fullheight">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title is-1 is-uppercase has-text-white">Projects</h1>
+
+        {% for project in data[title]['projects'] %}
+        <div class="block">
+          <div class="card">
+            <div class="card-content">
+              <div class="columns is-gapless is-vcentered is-centered">
+                <div class="column">
+                  <h1 class="title is-1">{{project.title}}</h1>
+                  <!-- <h1 class="subtitle is-3">{{project.link}}</h1> -->
+                  <div class="block is-centered">
+                    <h1 class="title is-6">{{project.description}}</h1>
+                    <div class="tags is-centered">
+                      <a href={{project.link}}>
+                      <button class="button is-large is-danger is-rounded">
+                        <span class="icon is-medium">
+                          <i class="fas fa-link"></i>
+                        </span> 
+                        <span>Link</span>
+                      </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <figure class="image is-2by1">
+                    <img src={{ project['image']}} />
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
   <section class="hero has-hobbies-bg is-fullheight">
     <div class="hero-body">
       <div class="container has-text-centered">
-        <h1 class="title is-1 is-uppercase blue-outlined">Hobbies</h1>
+        <h1 class="title is-1 is-uppercase has-text-white">Hobbies</h1>
         <div class="columns">
           {% for hobbies in data[title]['hobbies'] %}
           <div class="column">
