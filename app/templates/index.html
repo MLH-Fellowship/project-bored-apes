@@ -10,8 +10,9 @@
   <link rel="stylesheet" href="../static/styles/main.css">
 
 </head>
-
 <body>
+
+  
 
 
   <!--Navbar start-->
@@ -42,6 +43,26 @@
   <button class="button" onclick="show_hide()" >Arrow</button>
   <script src = " {{ url_for('static', filename='js/arrow.js') }}"></script>
   <!--Navbar end-->
+
+  <div class="columns">
+    <div class="column"></div>
+    <div class="column">
+      <div class="box">
+        <p class="title is-5"> {{ data[title]['name'] }} </p>
+        <img
+        src= {{ data[title]['image'] }}
+        class="same-size">
+      </div>
+    </div>
+    <div class="column is-narrow">
+      <div class="box" style="width: 700px;">
+        <p class="title is-5">About Me</p>
+        <p class="subtitle">{{ data[title]['about'] }}</p>
+      </div>
+    </div>
+    <div class="column"></div>
+  </div>
+
 
   <section class="hero has-jungle-bg is-fullheight">
     <div class="hero-body">
