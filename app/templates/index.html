@@ -90,112 +90,44 @@
     </div>
   </section>
 
-
+  <!-- EDUCATION START-->
   <section class="hero has-nft-bg is-fullheight">
     <div class="hero-body">
       <div class="container has-text-centered">
         <h1 class="title is-1 is-uppercase has-text-white green-outlined">Education</h1>
 
+        {% for school in data[title]['schools'] %}
         <div class="block">
-
-
-
           <div class="card">
-            <div class="card-content">
-
-              <div class="columns is-gapless is-vcentered is-centered">
-                <div class="column">
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/University_of_Alberta_Logo_%282021%29.svg/2560px-University_of_Alberta_Logo_%282021%29.svg.png"
-                    width="300" height="300">
-                  <h1 class="title is-1">Bachelor of Science</h1>
-                  <h1 class="subtitle is-3">Computing Science & Economics</h1>
-
-                  <div class="block">
-                    <h1 class="title is-6">Favourite Courses</h1>
-                    <div class="tags is-centered">
-                      <span class="tag is-large is-danger is-rounded">Computer Networks</span>
-                      <span class="tag is-large is-danger is-rounded">
-                        Database Management Systems</span>
-                      <span class="tag is-large is-danger is-rounded">Operating System Concepts</span>
-                    </div>
+              <div class="card-content">
+                  <div class="columns is-gapless is-vcentered is-centered">
+                      <div class="column">
+                          <img src="{{school.logo}}" width="300" height="300">
+                          <h1 class="title is-1">{{school.degree}}</h1>
+                          <h1 class="subtitle is-3">{{school.course}}</h1>
+                          <div class="block">
+                              <h1 class="title is-6">Favourite Courses</h1>
+                              <div class="tags is-centered">
+                                  {% for favourite in school.favourites %}
+                                  <span class="tag is-large is-danger is-rounded">{{favourite}}</span>
+                                  {% endfor %}
+                              </div>
+                          </div>
+                      </div>
+                      <div class="column">
+                          <figure class="image">
+                              <img src="{{school.campus}}" />
+                          </figure>
+                      </div>
                   </div>
-
-                </div>
-
-
-                <div class="column">
-                  <figure class="image">
-                    <img
-                      src="https://www.ualberta.ca/external-relations/media-library/community-relations/photos/12784-06-115-athabasca02.png" />
-                  </figure>
-
-
-                </div>
               </div>
-
-
-
-
-            </div>
-
           </div>
-
-        </div>
-
-        <div class="block">
-
-
-
-          <div class="card">
-            <div class="card-content">
-
-              <div class="columns is-gapless is-vcentered is-centered">
-                <div class="column">
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/QueensU_Wordmark.svg/2560px-QueensU_Wordmark.svg.png"
-                    width="300" height="300">
-                  <h1 class="title is-1">Bachelor of Computing (Honours) - BCPH</h1>
-
-
-                  <div class="block">
-                    <h1 class="title is-6">Favourite Courses</h1>
-                    <div class="tags is-centered">
-                      <span class="tag is-large is-danger is-rounded">Computer Networks</span>
-                      <span class="tag is-large is-danger is-rounded">
-                        Database Management Systems</span>
-                      <span class="tag is-large is-danger is-rounded">Operating System Concepts</span>
-                    </div>
-                  </div>
-
-
-                </div>
-                <div class="column">
-                  <figure class="image">
-                    <img
-                      src="https://www.queensu.ca/admission/sites/default/files/assets/20200923_220147458_iOS_1.jpg" />
-                  </figure>
-
-
-                </div>
-              </div>
-
-
-
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-
-
       </div>
-    </div>
-  </section>
+      {% endfor %}
+  </div>
+</div>
+</section>
+  
   <section class="hero has-hobbies-bg is-fullheight">
     <div class="hero-body">
         <div class="container has-text-centered">
@@ -223,19 +155,6 @@
 
 
   <div id="map" style="width: 100%; height: 100%; position: relative;"></div>
-
-  <!-- <section class="hero has-jungle-bg is-fullheight">
- <div class="hero-body">
-
-<div class="container has-text-centered">
-     <h1 class="title is-1 has-text-white">Map</h1>
-
-
-</div>
-
-  </div>
-</section>  -->
-
 
   <section class="hero has-jungle-bg is-fullheight">
     <div class="hero-body ">
