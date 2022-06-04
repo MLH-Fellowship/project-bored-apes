@@ -46,7 +46,7 @@
   </nav>
   <!--Navbar end-->
   
-  <section class="hero has-background-info is-medium p-6">
+  <section class="hero has-background-info is-fullheight p-6">
     <div class="hero-body p-6">
       <div class="container has-text-centered">
         <div class="column is-8 is-offset-2">
@@ -54,7 +54,7 @@
             <div class="card-content">
                 <div class="profile">
                   <div id="profile-picture" class="profile-picture">
-                    <img src={{ data[title]['image'] }}>
+                    <img src="{{ data[title]['image']}}">
                 </div>
                 </div>
               <p class="title is-4"> {{ data[title]['name'] }} </p>
@@ -97,12 +97,12 @@
     <div class="hero-body">
       <div class="container has-text-centered">
         <h1 class="title is-1 is-uppercase has-text-white ">Work Experience</h1>
-        <div class="columns">
+        <div class="columns is-centered">
 
           <!-- start card -->
 
           {% for experience in data[title]['experience'] %}
-          <div class="column">
+          <div class="column is-half">
 
 
             <div class="card">
@@ -125,7 +125,7 @@
                 <p></p>
 
                 <ul>
-                  <li>{{ experience['info'] }}</li>
+                  <li style="white-space: pre-wrap">{{ experience['info'] }}</li>
                 </ul>
               </div>
             </div>
@@ -375,15 +375,15 @@
     function initMap() {
 
       // The location of Geeksforgeeks office
-      const myLatLng = {
-        lat: -25.363,
-        lng: 131.044
-      };
+      // const myLatLng = {
+      //   lat: -25.363,
+      //   lng: 131.044
+      // };
 
-      const edmonton = {
-        lat: 53.631611,
-        lng: -113.490112
-      };
+      // const center = {
+      //   lat: locations[0].lat,
+      //   lng: locations[0].lng
+      // };
 
       const newYork = {
         lat: 40.730610,
@@ -393,26 +393,52 @@
       // Create the map, centered at gfg_office
       const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 3,
-        center: edmonton,
+        center: newYork,
       });
 
-      new google.maps.Marker({
-        position: myLatLng,
-        map,
-        title: "Hello World!",
+      var places = {{data|tojson}};
+
+      // var parse = JSON.parse(places);
+
+      var infowindow = new google.maps.InfoWindow();
+
+      const locations = places["{{title}}"].locations;
+
+      console.log(locations);
+      
+      // console.log(locations[0].lat);
+
+      var marker, i;
+      // alert(places)
+      for (i = 0; i < locations.length; i++){
+      
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
+        map: map
       });
 
-      new google.maps.Marker({
-        position: edmonton,
-        map,
-        title: "Hello World!",
-      });
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i].name);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
 
-      new google.maps.Marker({
-        position: newYork,
-        map,
-        title: "Hello World!",
-      });
+
+      }
+   
+
+      // new google.maps.Marker({
+      //   position: edmonton,
+      //   map,
+      //   title: "Hello World!",
+      // });
+
+      // new google.maps.Marker({
+      //   position: newYork,
+      //   map,
+      //   title: "Hello World!",
+      // });
 
 
     }

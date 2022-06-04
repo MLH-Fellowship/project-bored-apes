@@ -1,255 +1,279 @@
 {
-    "hadi" : {
-        "name" : "Hadi Chaaban",
-        "about" : "I'm an aspiring software developer from Detroit, Michigan. In my spare time, I enjoy playing video games and making electronics. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        "image" : "https://media-exp1.licdn.com/dms/image/C5603AQHg8GeQlIQBKA/profile-displayphoto-shrink_800_800/0/1651090159726?e=1659571200&v=beta&t=FDrDc1ybcS05fHwMpSxAZNVPgTkdKeC803wYavua_Vk",
-        "experience": [
+    "hadi":{
+        "name":"Hadi Chaaban",
+        "about":"I'm an aspiring software developer from Detroit, Michigan. In my spare time, I enjoy playing video games and making electronics. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "image":"https://media-exp1.licdn.com/dms/image/C5603AQHg8GeQlIQBKA/profile-displayphoto-shrink_800_800/0/1651090159726?e=1659571200&v=beta&t=FDrDc1ybcS05fHwMpSxAZNVPgTkdKeC803wYavua_Vk",
+        "experience":[
             {
-                "title": "Software Developer Itern",
-                "location": "San Francisco, California",
-                "range": "May 2020 - August 2021",
-                "info": "Developed performant, scalable and highly available applications using Kotlin, Docker, Apache Ignite\nManaged infrastructure using Terraform, Jenkins, and Ansible.\nImplemented delta query APIs resulting in a 99% decrease in payload and a 32-71% decrease in latency",
-                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Uber_logo_2018.svg/2560px-Uber_logo_2018.svg.png"
+                "title":"Software Developer Itern",
+                "location":"San Francisco, California",
+                "range":"May 2020 - August 2021",
+                "info":"Developed performant, scalable and highly available applications using Kotlin, Docker, Apache Ignite\nManaged infrastructure using Terraform, Jenkins, and Ansible.\nImplemented delta query APIs resulting in a 99% decrease in payload and a 32-71% decrease in latency",
+                "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Uber_logo_2018.svg/2560px-Uber_logo_2018.svg.png"
             },
             {
-                "title": "Software Developer Itern",
-                "location": "Redmond, Washington",
-                "range": "May 2020 - August 2021",
-                "info": "Developed performant, scalable and highly available applications using Kotlin, Docker, Apache Ignite\nManaged infrastructure using Terraform, Jenkins, and Ansible.\nImplemented delta query APIs resulting in a 99% decrease in payload and a 32-71% decrease in latency",
-                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/2560px-Microsoft_logo_%282012%29.svg.png"
+                "title":"Software Developer Itern",
+                "location":"Redmond, Washington",
+                "range":"May 2020 - August 2021",
+                "info":"Developed performant, scalable and highly available applications using Kotlin, Docker, Apache Ignite\nManaged infrastructure using Terraform, Jenkins, and Ansible.\nImplemented delta query APIs resulting in a 99% decrease in payload and a 32-71% decrease in latency",
+                "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/2560px-Microsoft_logo_%282012%29.svg.png"
             },
             {
-                "title": "Software Developer Itern",
-                "location": "Mountain View, California",
-                "range": "May 2020 - August 2021",
-                "info": "Developed performant, scalable and highly available applications using Kotlin, Docker, Apache Ignite\nManaged infrastructure using Terraform, Jenkins, and Ansible.\nImplemented delta query APIs resulting in a 99% decrease in payload and a 32-71% decrease in latency",
-                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
+                "title":"Software Developer Itern",
+                "location":"Mountain View, California",
+                "range":"May 2020 - August 2021",
+                "info":"Developed performant, scalable and highly available applications using Kotlin, Docker, Apache Ignite\nManaged infrastructure using Terraform, Jenkins, and Ansible.\nImplemented delta query APIs resulting in a 99% decrease in payload and a 32-71% decrease in latency",
+                "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
             }
         ],
-        "projects" : [
+        "projects":[
             {
-                "title": "Formica",
-                "description": "An in-discord form service that allows you to fill in forms via a discord bot. You can create and manage forms, as well as manage your responses via a web interface.",
-                "image": "http://droplr.com/wp-content/uploads/2020/09/discord-bots-e1635362784159.png",
-                "link": "https://github.com/felixfaisal/formica"
+                "title":"Formica",
+                "description":"An in-discord form service that allows you to fill in forms via a discord bot. You can create and manage forms, as well as manage your responses via a web interface.",
+                "image":"http://droplr.com/wp-content/uploads/2020/09/discord-bots-e1635362784159.png",
+                "link":"https://github.com/felixfaisal/formica"
             },
             {
-                "title": "Don't Fear the Reaper!",
-                "description": "A 2D hide n' seek game, where you can play as the grim reaper where the objective is to hunt down the TBD (To Be Deceased). Or, you can play as the TBD, with a goal of escaping the reaper's catacombs before he finds you.",
-                "image": "http://droplr.com/wp-content/uploads/2020/09/discord-bots-e1635362784159.png",
-                "link": "https://github.com/n-maido/dont-fear-the-reaper"
+                "title":"Don't Fear the Reaper!",
+                "description":"A 2D hide n' seek game, where you can play as the grim reaper where the objective is to hunt down the TBD (To Be Deceased). Or, you can play as the TBD, with a goal of escaping the reaper's catacombs before he finds you.",
+                "image":"http://droplr.com/wp-content/uploads/2020/09/discord-bots-e1635362784159.png",
+                "link":"https://github.com/n-maido/dont-fear-the-reaper"
             },
             {
-                "title": "The Education Game",
-                "description": "An educational game for children with autism, intended to improve their development in 3 skill areas: arithmetic, emotion recognition, and fine motor skills.",
-                "image": "http://droplr.com/wp-content/uploads/2020/09/discord-bots-e1635362784159.png",
-                "link": "https://github.com/n-maido/the-education-game"
+                "title":"The Education Game",
+                "description":"An educational game for children with autism, intended to improve their development in 3 skill areas: arithmetic, emotion recognition, and fine motor skills.",
+                "image":"http://droplr.com/wp-content/uploads/2020/09/discord-bots-e1635362784159.png",
+                "link":"https://github.com/n-maido/the-education-game"
             }
         ],
-        "social" : [
+        "social":[
             {
-                "name" : "LinkedIn",
-                "val" : "https://www.linkedin.com/in/nhimaido/"
+                "name":"LinkedIn",
+                "val":"https://www.linkedin.com/in/nhimaido/"
             },
             {
-                "name" : "GitHub",
-                "val" : "https://github.com/n-maido"
+                "name":"GitHub",
+                "val":"https://github.com/n-maido"
             },
             {
-                "name" : "nhi_maido@outlook.com"
+                "name":"nhi_maido@outlook.com"
             }
         ],
-        "schools" : [
+        "schools":[
             {
-                "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/University_of_Alberta_Logo_%282021%29.svg/2560px-University_of_Alberta_Logo_%282021%29.svg.png",
-                "degree": "Bachelor of Science",
-                "course": "Computing Science & Economics",
-                "favourites": ["Computer Networks", "Database Management Systems", "Operating System Concepts"],
-                "campus": "https://www.ualberta.ca/external-relations/media-library/community-relations/photos/12784-06-115-athabasca02.png"
-            }, 
+                "logo":"https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/University_of_Alberta_Logo_%282021%29.svg/2560px-University_of_Alberta_Logo_%282021%29.svg.png",
+                "degree":"Bachelor of Science",
+                "course":"Computing Science & Economics",
+                "favourites":[
+                    "Computer Networks",
+                    "Database Management Systems",
+                    "Operating System Concepts"
+                ],
+                "campus":"https://www.ualberta.ca/external-relations/media-library/community-relations/photos/12784-06-115-athabasca02.png"
+            },
             {
-                "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/QueensU_Wordmark.svg/2560px-QueensU_Wordmark.svg.png",
-                "degree": "Bachelor of Computing (Honours) - BCPH",
-                "course": "Computer Science",
-                "favourites": ["Artificial Intelligence", "Database Management Systems", "Operating System Concepts"],
-                "campus": "https://www.queensu.ca/admission/sites/default/files/assets/20200923_220147458_iOS_1.jpg"
+                "logo":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/QueensU_Wordmark.svg/2560px-QueensU_Wordmark.svg.png",
+                "degree":"Bachelor of Computing (Honours) - BCPH",
+                "course":"Computer Science",
+                "favourites":[
+                    "Artificial Intelligence",
+                    "Database Management Systems",
+                    "Operating System Concepts"
+                ],
+                "campus":"https://www.queensu.ca/admission/sites/default/files/assets/20200923_220147458_iOS_1.jpg"
             }
         ],
-        "hobbies": [
+        "hobbies":[
             {
-                "image": "https://media.timeout.com/images/105863223/750/422/image.jpg",
-                "hobby": "Star Wars"
-            }, {
-                "image": "https://hips.hearstapps.com/amv-prod-gp.s3.amazonaws.com/gearpatrol/wp-content/uploads/2019/11/Mechanical-Keyboard-Buying-Guide-Gear-Patrol-Feature.jpg?crop=1xw:0.65xh;center,top&resize=1200:*",
-                "hobby": "Mechanical Keyboards"
-            }, {
-                "image": "https://assets-prd.ignimgs.com/2021/12/30/36190303-image-7-1640880187142.png",
-                "hobby": "Video Games"
+                "image":"https://media.timeout.com/images/105863223/750/422/image.jpg",
+                "hobby":"Star Wars"
+            },
+            {
+                "image":"https://hips.hearstapps.com/amv-prod-gp.s3.amazonaws.com/gearpatrol/wp-content/uploads/2019/11/Mechanical-Keyboard-Buying-Guide-Gear-Patrol-Feature.jpg?crop=1xw:0.65xh;center,top&resize=1200:*",
+                "hobby":"Mechanical Keyboards"
+            },
+            {
+                "image":"https://assets-prd.ignimgs.com/2021/12/30/36190303-image-7-1640880187142.png",
+                "hobby":"Video Games"
             }
-            
         ]
     },
-
-    "logan" : {
-        "name" : "Logan Hoogendijk",
-        "about" : "Solution-oriented computer engineering student with experience in Java, Python, C/C++. Passionate about application development both in formal education projects and personal use. Adept at teamwork, problem solving, and communicating. I am always eager to learn more and improve my skills.",
-        "image" : "https://media-exp1.licdn.com/dms/image/C4D03AQH8dG-yJOickw/profile-displayphoto-shrink_200_200/0/1643664093544?e=1659571200&v=beta&t=Sfa6xnpZ129ObXbxwCG-VYBw305sikll4wKkPlyTw3U",
-        "experience": [
+    "logan":{
+        "name":"Logan Hoogendijk",
+        "about":"Solution-oriented computer engineering student with experience in Java, Python, C/C++. Passionate about application development both in formal education projects and personal use. Adept at teamwork, problem solving, and communicating. I am always eager to learn more and improve my skills.",
+        "image":"https://media-exp1.licdn.com/dms/image/C4D03AQH8dG-yJOickw/profile-displayphoto-shrink_200_200/0/1643664093544?e=1659571200&v=beta&t=Sfa6xnpZ129ObXbxwCG-VYBw305sikll4wKkPlyTw3U",
+        "experience":[
             {
-                "title": "Developer",
-                "location": "Kingston, Ontario, Canada",
-                "range": "Sept 2021 - May 2022",
-                "info": "Created an animal wildlife classification tool based on inputted pictures using Python\nResearched different image classification methods, models, and parameters\nImplemented Inception v3 trained on ImageNet and tested on the KTH-ANIMALS dataset",
-                "image": "data:image/png;base64,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"
+                "title":"Developer",
+                "location":"Kingston, Ontario, Canada",
+                "range":"Sept 2021 - May 2022",
+                "info":"Created an animal wildlife classification tool based on inputted pictures using Python\nResearched different image classification methods, models, and parameters\nImplemented Inception v3 trained on ImageNet and tested on the KTH-ANIMALS dataset",
+                "image":"data:image/png;base64,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"
             },
             {
-                "title": "Developer",
-                "location": "Kingston, Ontario, Canada",
-                "range": "Jan 2021 - April 2021",
-                "info": "Recommended a solution to analyze handwritten digits and solve the MNIST dataset using Python\nResearched and implemented different machine learning algorithms",
-                "image": "data:image/png;base64,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"
+                "title":"Developer",
+                "location":"Kingston, Ontario, Canada",
+                "range":"Jan 2021 - April 2021",
+                "info":"Recommended a solution to analyze handwritten digits and solve the MNIST dataset using Python\nResearched and implemented different machine learning algorithms",
+                "image":"data:image/png;base64,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"
             }
         ],
-        "projects" : [
+        "projects":[
             {
-                "title": "CookHack",
-                "description": "A web application that allows user to input their current ingredients and will receive recipes to cook with those ingredients. Features an image detection model to input ingredients using a picture.",
-                "image": "../static/img/cookhack.png",
-                "link": "https://devpost.com/software/cookhack"
+                "title":"CookHack",
+                "description":"A web application that allows user to input their current ingredients and will receive recipes to cook with those ingredients. Features an image detection model to input ingredients using a picture.",
+                "image":"../static/img/cookhack.png",
+                "link":"https://devpost.com/software/cookhack"
             },
             {
-                "title": "NoteHack",
-                "description": "A web application that provides the convenience and accessibility to access free notes online to provide higher quality learning through refined and polished shared notes.",
-                "image": "../static/img/notehack.png",
-                "link": "https://devpost.com/software/notehacks"
+                "title":"NoteHack",
+                "description":"A web application that provides the convenience and accessibility to access free notes online to provide higher quality learning through refined and polished shared notes.",
+                "image":"../static/img/notehack.png",
+                "link":"https://devpost.com/software/notehacks"
             }
         ],
-        "social" : [
+        "social":[
             {
-                "name" : "LinkedIn",
-                "val" : "https://www.linkedin.com/in/logan-hoogendijk/"
+                "name":"LinkedIn",
+                "val":"https://www.linkedin.com/in/logan-hoogendijk/"
             },
             {
-                "name" : "GitHub",
-                "val" : "https://github.com/LoganHoogendijk"
+                "name":"GitHub",
+                "val":"https://github.com/LoganHoogendijk"
             },
             {
-                "name" : "nhi_maido@outlook.com"
+                "name":"nhi_maido@outlook.com"
+            }
+        ],
+        "schools":[
+            {
+                "logo":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/QueensU_Wordmark.svg/2560px-QueensU_Wordmark.svg.png",
+                "degree":"Bachelor of Applied Science - BASc",
+                "course":"Computer Engineering",
+                "favourites":[
+                    "Object Oriented Programming",
+                    "Computer Architecture",
+                    "Information Structures"
+                ],
+                "campus":"https://www.queensu.ca/admission/sites/default/files/assets/20200923_220147458_iOS_1.jpg"
+            }
+        ],
+        "hobbies":[
+            {
+                "image":"https://images.complex.com/complex/images/c_fill,dpr_auto,f_auto,q_90,w_1400/fl_lossy,pg_1/ihsu8s0scdmdivfjyde0/verzuz-rapper-power-ranking",
+                "hobby":"Hip-Hop/Rap Music"
+            },
+            {
+                "image":"https://static1.moviewebimages.com/wordpress/wp-content/uploads/2022/01/Netflix.jpg?q=50&fit=contain&w=1500&h=844&dpr=1.5",
+                "hobby":"Tv Shows/Movies"
+            },
+            {
+                "image":"https://assets-prd.ignimgs.com/2021/12/30/36190303-image-7-1640880187142.png",
+                "hobby":"Video Games"
+            }
+        ],
+        "locations":[
+            {
+                "lat":52.3676,
+                "lng":4.9041,
+                "name":"Amsterdam"
+            },
+             {
+                "lat":39.4699,
+                "lng":0.3763,
+                "name":"Valencia"
+            }
+        ]
+    },
+    "justin":{
+        "name":"Justin Monteza",
+        "about":"I'm an aspiring software developer from (not) Detroit, Michigan. In my spare time, I enjoy playing video games and making electronics.",
+        "image": "https://storage.googleapis.com/justinmonteza/Photo.jpg",
+        "experience":[
+            {
+                "title":"Undergraduate Teaching Assistant",
+                "location":"Edmonton, Alberta, Canada",
+                "range":"June 2022 - August 2022",
+                "info":"Designing course structure, lab assignments, lecture slides, instructional videos, and exam questions.\nWorking on data processing, text file parsing, web scraping, APIs, web development, and mobile development\n",
+                "image":"https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/University_of_Alberta_Logo_%282021%29.svg/2560px-University_of_Alberta_Logo_%282021%29.svg.png"
+            }
+        ],
+        "projects":[
+            {
+                "title":"Formica",
+                "description":"An in-discord form service that allows you to fill in forms via a discord bot. You can create and manage forms, as well as manage your responses via a web interface.",
+                "image":"http://droplr.com/wp-content/uploads/2020/09/discord-bots-e1635362784159.png",
+                "link":"https://github.com/felixfaisal/formica"
+            },
+            {
+                "title":"Don't Fear the Reaper!",
+                "description":"A 2D hide n' seek game, where you can play as the grim reaper where the objective is to hunt down the TBD (To Be Deceased). Or, you can play as the TBD, with a goal of escaping the reaper's catacombs before he finds you.",
+                "image":"http://droplr.com/wp-content/uploads/2020/09/discord-bots-e1635362784159.png",
+                "link":"https://github.com/n-maido/dont-fear-the-reaper"
+            },
+            {
+                "title":"The Education Game",
+                "description":"An educational game for children with autism, intended to improve their development in 3 skill areas: arithmetic, emotion recognition, and fine motor skills.",
+                "image":"http://droplr.com/wp-content/uploads/2020/09/discord-bots-e1635362784159.png",
+                "link":"https://github.com/n-maido/the-education-game"
+            }
+        ],
+        "social":[
+            {
+                "name":"LinkedIn",
+                "val":"https://www.linkedin.com/in/nhimaido/"
+            },
+            {
+                "name":"GitHub",
+                "val":"https://github.com/n-maido"
+            },
+            {
+                "name":"nhi_maido@outlook.com"
+            }
+        ],
+        "schools":[
+            {
+                "logo":"https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/University_of_Alberta_Logo_%282021%29.svg/2560px-University_of_Alberta_Logo_%282021%29.svg.png",
+                "degree":"Bachelor of Science",
+                "course":"Computing Science & Economics",
+                "favourites":[
+                    "Computer Networks",
+                    "Database Management Systems",
+                    "Operating System Concepts"
+                ],
+                "campus":"https://www.ualberta.ca/external-relations/media-library/community-relations/photos/12784-06-115-athabasca02.png"
+            }
+        ],
+        "hobbies":[
+            {
+                "image":"https://media.timeout.com/images/105863223/750/422/image.jpg",
+                "hobby":"Star Wars"
+            },
+            {
+                "image":"https://hips.hearstapps.com/amv-prod-gp.s3.amazonaws.com/gearpatrol/wp-content/uploads/2019/11/Mechanical-Keyboard-Buying-Guide-Gear-Patrol-Feature.jpg?crop=1xw:0.65xh;center,top&resize=1200:*",
+                "hobby":"Mechanical Keyboards"
+            },
+            {
+                "image":"https://assets-prd.ignimgs.com/2021/12/30/36190303-image-7-1640880187142.png",
+                "hobby":"Video Games"
             }
         ], 
-        "schools" : [
+        "locations": [
             {
-                "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/QueensU_Wordmark.svg/2560px-QueensU_Wordmark.svg.png",
-                "degree": "Bachelor of Applied Science - BASc",
-                "course": "Computer Engineering",
-                "favourites": ["Object Oriented Programming", "Computer Architecture", "Information Structures"],
-                "campus": "https://www.queensu.ca/admission/sites/default/files/assets/20200923_220147458_iOS_1.jpg"
-            }
-        ],
-        "hobbies": [
-            {
-                "image": "https://images.complex.com/complex/images/c_fill,dpr_auto,f_auto,q_90,w_1400/fl_lossy,pg_1/ihsu8s0scdmdivfjyde0/verzuz-rapper-power-ranking",
-                "hobby": "Hip-Hop/Rap Music"
-            }, {
-                "image": "https://static1.moviewebimages.com/wordpress/wp-content/uploads/2022/01/Netflix.jpg?q=50&fit=contain&w=1500&h=844&dpr=1.5",
-                "hobby": "Tv Shows/Movies"
-            }, {
-                "image": "https://assets-prd.ignimgs.com/2021/12/30/36190303-image-7-1640880187142.png",
-                "hobby": "Video Games"
-            }
-            
-        ]
-        
-    },
-
-    "justin" : {
-        "name" : "Justin Monteza",
-        "about" : "I'm an aspiring software developer from (not) Detroit, Michigan. In my spare time, I enjoy playing video games and making electronics.",
-        "image" : "",
-        "experience": [
-            {
-                "title": "Software Developer Itern",
-                "location": "San Francisco, California",
-                "range": "May 2020 - August 2021",
-                "info": "Developed performant, scalable and highly available applications using Kotlin, Docker, Apache Ignite\nManaged infrastructure using Terraform, Jenkins, and Ansible.\nImplemented delta query APIs resulting in a 99% decrease in payload and a 32-71% decrease in latency",
-                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Uber_logo_2018.svg/2560px-Uber_logo_2018.svg.png"
+                "lat": 51.0447,
+                "lng": -114.0719,
+                "name": "Calgary"
             },
             {
-                "title": "Software Developer Itern",
-                "location": "Redmond, Washington",
-                "range": "May 2020 - August 2021",
-                "info": "Developed performant, scalable and highly available applications using Kotlin, Docker, Apache Ignite\nManaged infrastructure using Terraform, Jenkins, and Ansible.\nImplemented delta query APIs resulting in a 99% decrease in payload and a 32-71% decrease in latency",
-                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/2560px-Microsoft_logo_%282012%29.svg.png"
+                "lat": 22.3193,
+                "lng": 114.1694,
+                "name": "Hong Kong"
             },
             {
-                "title": "Software Developer Itern",
-                "location": "Mountain View, California",
-                "range": "May 2020 - August 2021",
-                "info": "Developed performant, scalable and highly available applications using Kotlin, Docker, Apache Ignite\nManaged infrastructure using Terraform, Jenkins, and Ansible.\nImplemented delta query APIs resulting in a 99% decrease in payload and a 32-71% decrease in latency",
-                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
+                "lat": 49.2827,
+                "lng": -123.1207,
+                "name": "Vancouver"
             }
-        ],
-        "projects" : [
-            {
-                "title": "Formica",
-                "description": "An in-discord form service that allows you to fill in forms via a discord bot. You can create and manage forms, as well as manage your responses via a web interface.",
-                "image": "http://droplr.com/wp-content/uploads/2020/09/discord-bots-e1635362784159.png",
-                "link": "https://github.com/felixfaisal/formica"
-            },
-            {
-                "title": "Don't Fear the Reaper!",
-                "description": "A 2D hide n' seek game, where you can play as the grim reaper where the objective is to hunt down the TBD (To Be Deceased). Or, you can play as the TBD, with a goal of escaping the reaper's catacombs before he finds you.",
-                "image": "http://droplr.com/wp-content/uploads/2020/09/discord-bots-e1635362784159.png",
-                "link": "https://github.com/n-maido/dont-fear-the-reaper"
-            },
-            {
-                "title": "The Education Game",
-                "description": "An educational game for children with autism, intended to improve their development in 3 skill areas: arithmetic, emotion recognition, and fine motor skills.",
-                "image": "http://droplr.com/wp-content/uploads/2020/09/discord-bots-e1635362784159.png",
-                "link": "https://github.com/n-maido/the-education-game"
-            }
-        ],
-        "social" : [
-            {
-                "name" : "LinkedIn",
-                "val" : "https://www.linkedin.com/in/nhimaido/"
-            },
-            {
-                "name" : "GitHub",
-                "val" : "https://github.com/n-maido"
-            },
-            {
-                "name" : "nhi_maido@outlook.com"
-            }
-        ],
-        "schools" : [
-            {
-                "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/University_of_Alberta_Logo_%282021%29.svg/2560px-University_of_Alberta_Logo_%282021%29.svg.png",
-                "degree": "Bachelor of Science",
-                "course": "Computing Science & Economics",
-                "favourites": ["Computer Networks", "Database Management Systems", "Operating System Concepts"],
-                "campus": "https://www.ualberta.ca/external-relations/media-library/community-relations/photos/12784-06-115-athabasca02.png"
-            }, 
-            {
-                "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/QueensU_Wordmark.svg/2560px-QueensU_Wordmark.svg.png",
-                "degree": "Bachelor of Computing (Honours) - BCPH",
-                "course": "Computer Science",
-                "favourites": ["Artificial Intelligence", "Database Management Systems", "Operating System Concepts"],
-                "campus": "https://www.queensu.ca/admission/sites/default/files/assets/20200923_220147458_iOS_1.jpg"
-            }
-        ],
-        "hobbies": [
-            {
-                "image": "https://media.timeout.com/images/105863223/750/422/image.jpg",
-                "hobby": "Star Wars"
-            }, {
-                "image": "https://hips.hearstapps.com/amv-prod-gp.s3.amazonaws.com/gearpatrol/wp-content/uploads/2019/11/Mechanical-Keyboard-Buying-Guide-Gear-Patrol-Feature.jpg?crop=1xw:0.65xh;center,top&resize=1200:*",
-                "hobby": "Mechanical Keyboards"
-            }, {
-                "image": "https://assets-prd.ignimgs.com/2021/12/30/36190303-image-7-1640880187142.png",
-                "hobby": "Video Games"
-            }
-            
         ]
     }
 }
