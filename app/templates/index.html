@@ -4,6 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="{{ data[title]['name']|title}}'s Portfolio">
+  <meta property="og:description" content="{{ data[title]['name']|title}}'s Portfolio">
+  <meta property="og:url" content="{{ url }}">
+  <meta propery="og:author" content="Hadi Chaaban, Logan Hoogendijk, Justin Monteza">
 
   <title>{{ data[title]['name']|title}}'s Portfolio</title>
   <link rel="icon" type="image/x-icon" href="{{ data[title]['image']}}">
@@ -16,6 +20,19 @@
 <body>
   <!--Navbar start-->
   <nav id="top" class="navbar is-transparent" id="grnav">
+
+     <div class="navbar-brand">
+    <a class="navbar-item" href="{{ url_for('index') }}">
+      <img src="{{ url_for('static', filename='img/logo.png') }}" width="112" height="28">
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
     <div class="navbar-menu">
         <div class="navbar-start" id="topnavbar">
           {% for person in data %}
@@ -105,7 +122,7 @@
   
 
   
-  
+  {% if data[title]['experience'] %}
   <section id="experience" class="hero has-jungle-bg is-fullheight">
     <div class="hero-body">
       <div class="container has-text-centered">
@@ -150,6 +167,7 @@
         </div>
       </div>
   </section>
+  {% endif %}
 
   <!-- EDUCATION START-->
   <section id="education" class="hero has-nft-bg is-fullheight">
@@ -179,6 +197,7 @@
                   <figure class="image">
                     <img src="{{school.campus}}" />
                   </figure>
+                 <span><i class="fa-solid fa-location-dot"></i> &nbsp; {{school.location}}</span>
                 </div>
               </div>
             </div>
@@ -198,8 +217,8 @@
         <div class="block">
           <div class="card">
             <div class="card-content">
-              <div class="columns is-gapless is-vcentered is-centered">
-                <div class="column">
+              <div class="columns is-vcentered is-centered">
+                <div class="column is-three-fifths">
                   <h1 class="title is-1">{{project.title}}</h1>
                   <!-- <h1 class="subtitle is-3">{{project.link}}</h1> -->
                   <div class="block is-centered">
@@ -211,8 +230,10 @@
                       {% endfor %}
 </div>
 
-                    <div class="tags is-centered">
+                    <div class="buttons is-centered">
                       
+                      {% if project.link %}
+
                       <a href={{project.link}} target="_blank" rel="noreferrer noopener">
                       <button class="button is-large is-danger is-rounded">
                         <span class="icon is-medium">
@@ -222,6 +243,25 @@
                         <span>Link</span>
                       </button>
                       </a>
+                      
+                      {% endif %}
+
+                      {% if project.repo %}
+
+                          <a href={{project.repo}} target="_blank" rel="noreferrer noopener">
+                      <button class="button is-large is-danger is-rounded">
+                        <span class="icon is-medium">
+                          <i class="fab fa-github-alt"></i>
+                        </span> 
+                          
+                        <span>Repository</span>
+                      </button>
+                      </a>
+
+                      {% endif %}
+
+
+
                     </div>
                   </div>
                 </div>
@@ -238,6 +278,32 @@
       </div>
     </div>
   </section>
+
+
+ <section class="hero is-black is-fullheight p-6 has-text-centered">
+
+  <h1 class="title is-1 has-text-white is-uppercase">Trivia Board</h1>
+
+{% for trivia in data[title]['trivias'] %}
+
+<div class="tile is-ancestor">
+  {% for item in trivia %}
+  <div class="tile is-parent">
+    <article class="tile is-child box">
+      <p class="subtitle has-text-black">{{item.question}}</p>
+      <p class="title has-text-black">{{item.answer}}</p>
+    </article>
+  </div>
+
+{% endfor %}
+
+</div>
+
+{% endfor %}
+
+
+
+</section>
 
   <section id="hobbies" class="hero has-hobbies-bg is-fullheight">
     <div class="hero-body">
@@ -429,17 +495,6 @@
     // Initialize and add the map
     function initMap() {
 
-      // The location of Geeksforgeeks office
-      // const myLatLng = {
-      //   lat: -25.363,
-      //   lng: 131.044
-      // };
-
-      // const center = {
-      //   lat: locations[0].lat,
-      //   lng: locations[0].lng
-      // };
-
       const newYork = {
         lat: 40.730610,
         lng: -73.935242
@@ -453,18 +508,12 @@
 
       var places = {{data|tojson}};
 
-      // var parse = JSON.parse(places);
-
       var infowindow = new google.maps.InfoWindow();
 
       const locations = places["{{title}}"].locations;
 
-      console.log(locations);
-      
-      // console.log(locations[0].lat);
-
       var marker, i;
-      // alert(places)
+
       for (i = 0; i < locations.length; i++){
       
       marker = new google.maps.Marker({
@@ -478,24 +527,7 @@
           infowindow.open(map, marker);
         }
       })(marker, i));
-
-
       }
-   
-
-      // new google.maps.Marker({
-      //   position: edmonton,
-      //   map,
-      //   title: "Hello World!",
-      // });
-
-      // new google.maps.Marker({
-      //   position: newYork,
-      //   map,
-      //   title: "Hello World!",
-      // });
-
-
     }
   </script>
 

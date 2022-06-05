@@ -1,8 +1,6 @@
 from http.client import HTTPResponse
 import os
-import re
 import json
-from tkinter import ANCHOR
 from flask import Flask, render_template, request, url_for, redirect, Response
 from dotenv import load_dotenv
 from .gmail.gmail import send_email
@@ -15,7 +13,7 @@ filename = os.path.join(app.static_folder, 'data.json')
 with open(filename) as f:
     data = json.load(f)
 
-
+@app.route("/", defaults={"name": "logan"})
 @app.route("/<any(logan, hadi, justin):name>", methods=['GET'])
 def index(name):
     anchors = ["Experience", "Education", "Projects", "Hobbies", "Map", "Contact"]
