@@ -49,38 +49,28 @@
         "social":[
             {
                 "name":"LinkedIn",
-                "val":"https://www.linkedin.com/in/nhimaido/"
+                "val":"https://www.linkedin.com/in/hadi-a-chaaban-ab693217b/"
             },
             {
                 "name":"GitHub",
-                "val":"https://github.com/n-maido"
+                "val":"https://github.com/HadiCya/"
             },
             {
-                "name":"nhi_maido@outlook.com"
+                "name":"Email",
+                "val":"chaabanhadi22@gmail.com"
             }
         ],
         "schools":[
             {
-                "logo":"https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/University_of_Alberta_Logo_%282021%29.svg/2560px-University_of_Alberta_Logo_%282021%29.svg.png",
+                "logo":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/UMDearborn_Vertical_Logo.svg/2234px-UMDearborn_Vertical_Logo.svg.png",
                 "degree":"Bachelor of Science",
-                "course":"Computing Science & Economics",
+                "course":"Computer Science",
                 "favourites":[
                     "Computer Networks",
                     "Database Management Systems",
                     "Operating System Concepts"
                 ],
-                "campus":"https://www.ualberta.ca/external-relations/media-library/community-relations/photos/12784-06-115-athabasca02.png"
-            },
-            {
-                "logo":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/QueensU_Wordmark.svg/2560px-QueensU_Wordmark.svg.png",
-                "degree":"Bachelor of Computing (Honours) - BCPH",
-                "course":"Computer Science",
-                "favourites":[
-                    "Artificial Intelligence",
-                    "Database Management Systems",
-                    "Operating System Concepts"
-                ],
-                "campus":"https://www.queensu.ca/admission/sites/default/files/assets/20200923_220147458_iOS_1.jpg"
+                "campus":"https://umdearborn.edu/sites/default/files/group-library/37391/university_center.jpg"
             }
         ],
         "hobbies":[
@@ -123,13 +113,17 @@
                 "title":"CookHack",
                 "description":"A web application that allows user to input their current ingredients and will receive recipes to cook with those ingredients. Features an image detection model to input ingredients using a picture.",
                 "image":"../static/img/cookhack.png",
-                "link":"https://devpost.com/software/cookhack"
+                "link":"https://devpost.com/software/cookhack",
+                "stacks": ["CSS", "Cython", "Firebase", "Flask", "HTML", "JavaScript", "MongoDB", "Python", "React", "Redux"],
+                "repo": "https://github.com/KevinYuCode/QHACKS_2022"
             },
             {
                 "title":"NoteHack",
                 "description":"A web application that provides the convenience and accessibility to access free notes online to provide higher quality learning through refined and polished shared notes.",
                 "image":"../static/img/notehack.png",
-                "link":"https://devpost.com/software/notehacks"
+                "link":"https://devpost.com/software/notehacks",
+                "stacks": ["CSS", "Firebase", "Google Cloud", "JavaScript", "React", "Redux"],
+                "repo": "https://github.com/KevinYuCode/official_new_hacks_2021"
             }
         ],
         "social":[
@@ -142,7 +136,8 @@
                 "val":"https://github.com/LoganHoogendijk"
             },
             {
-                "name":"nhi_maido@outlook.com"
+                "name":"Email",
+                "val": "logan.hoogendijk@gmail.com"
             }
         ],
         "schools":[
@@ -178,11 +173,23 @@
                 "lng":4.9041,
                 "name":"Amsterdam"
             },
-             {
+            {
                 "lat":39.4699,
                 "lng":0.3763,
                 "name":"Valencia"
+            },
+            {
+                "lat":45.4408,
+                "lng": 12.3155,
+                "name":"Venice"
+            },
+            {
+                "lat":50.0755,
+                "lng": 14.4378,
+                "name":"Prague"
             }
+            
+
         ]
     },
     "justin":{
@@ -211,14 +218,15 @@
                 "description":"Allows users to order their prescription medication conveniently from the comfort of their own homes",
                 "image":"https://storage.googleapis.com/justinmonteza/Portfolio/MedsToGo.png",
                 "link":"http://www.medstogo.tech/",
-                "stacks": ["React", "Bootstrap", "MongoDB", "Express.js", "Node.js"]
+                "stacks": ["React", "Bootstrap", "MongoDB", "Express.js", "Node.js"],
+                "repo": "https://github.com/jiachen-ux/bugsquashers"
             },
             {
                 "title":"Appraisal",
                 "description":"An experiment tracking tool with in-depth analysis. Experiment result are visible to all among users by default, allowing all users to discuss and track experiments of one another.",
                 "image":"https://storage.googleapis.com/justinmonteza/Portfolio/AppraisalApp.png",
-                "link":"https://github.com/CMPUT301W21T11/Appraisal",
-                "stacks": ["Java", "Firebase Firestore", "Firebase Authentication", "Google Maps API"]
+                "stacks": ["Java", "Firebase Firestore", "Firebase Authentication", "Google Maps API"], 
+                "repo": "https://github.com/CMPUT301W21T11/Appraisal"
             }
         ],
         "social":[
@@ -254,7 +262,7 @@
                 "hobby":"Travelling"
             },
             {
-                "image":"https://hips.hearstapps.com/amv-prod-gp.s3.amazonaws.com/gearpatrol/wp-content/uploads/2019/11/Mechanical-Keyboard-Buying-Guide-Gear-Patrol-Feature.jpg?crop=1xw:0.65xh;center,top&resize=1200:*",
+                "image":"https://storage.googleapis.com/justinmonteza/Static/Books.png",
                 "hobby":"Books"
             },
             {
@@ -277,6 +285,16 @@
                 "lat": 49.2827,
                 "lng": -123.1207,
                 "name": "Vancouver"
+            }, 
+            {
+                "lat": 43.6532,
+                "lng": -79.3832,
+                "name": "Toronto"
+            }, 
+            {
+                "lat": 52.8737,
+                "lng": -118.0814,
+                "name": "Jasper"
             }
         ]
     }
