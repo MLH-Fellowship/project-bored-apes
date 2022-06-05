@@ -169,6 +169,62 @@
             }
             
 
+        ],
+        "trivias": [
+            [
+                {
+                 "question": "Coding since", 
+                 "answer": "2017" 
+                },
+                {
+                 "question": "Favourite Language", 
+                 "answer": "Java" 
+                },
+                {
+                 "question": "First Language", 
+                 "answer": "Java" 
+                },
+                {
+                 "question": "Dreaded Language", 
+                 "answer": "Assembly" 
+                }
+            ],
+            [
+                {
+                 "question": "Favourite CS Concept", 
+                 "answer": "AI/ML" 
+                },
+                {
+                 "question": "Hated CS Concept", 
+                 "answer": "Algorithms" 
+                },
+                {
+                 "question": "Code Editor", 
+                 "answer": "VSCode" 
+                },
+                {
+                 "question": "Editor Theme", 
+                 "answer": "Material Theme Darker" 
+                }
+            ],
+            [
+                {
+                 "question": "Listening to", 
+                 "answer": "SICK! by Earl Sweatshirt" 
+                },
+                {
+                 "question": "Night Owl or Early Bird", 
+                 "answer": "Early Bird" 
+                },
+                {
+                 "question": "Favourite Movie", 
+                 "answer": "The Truman Show" 
+                },
+                {
+                 "question": "Favourite TV Show", 
+                 "answer": "Dark" 
+                }
+            ]
         ]
     },
     "justin":{
