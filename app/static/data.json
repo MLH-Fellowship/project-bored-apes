@@ -187,7 +187,7 @@
     },
     "justin":{
         "name":"Justin Monteza",
-        "about":"I'm an aspiring software developer from (not) Detroit, Michigan. In my spare time, I enjoy playing video games and making electronics.",
+        "about":"I'm a computing science student with interest in software engineering, databases, computer networks, operating systems, and web development.",
         "image": "https://storage.googleapis.com/justinmonteza/Photo.jpg",
         "experience":[
             {
@@ -231,7 +231,8 @@
                 "val":"https://github.com/jmonteza"
             },
             {
-                "name":"nhi_maido@outlook.com"
+                "name":"Email",
+                "val": "justin.monteza@gmail.com"
             }
         ],
         "schools":[

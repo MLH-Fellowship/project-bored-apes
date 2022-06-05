@@ -134,19 +134,19 @@ def get_credentials():
 
     print("***********************************")
 
-    if os.path.exists('app/gmail/token.json'):
+    if os.path.exists('gmail/token.json'):
         creds = Credentials.from_authorized_user_file(
-            'app/gmail/token.json', SCOPES)
+            'gmail/token.json', SCOPES)
     # If there are no (valid) credentials available, let the user log in.
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                'app/gmail/credentials.json', SCOPES)
+                'gmail/credentials.json', SCOPES)
             creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
-        with open('app/gmail/token.json', 'w') as token:
+        with open('gmail/token.json', 'w') as token:
             token.write(creds.to_json())
 
     try:
