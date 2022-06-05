@@ -15,17 +15,21 @@
 
 <body>
   <!--Navbar start-->
-  <nav class="navbar is-transparent" id="grnav">
+  <nav id="top" class="navbar is-transparent" id="grnav">
     <div class="navbar-menu">
         <div class="navbar-start" id="topnavbar">
           {% for person in data %}
           {% if title == person %}
-          <a class="navbar-item has-text-weight-bold" href={{ person }}>
-            {{ data[person]["name"] }}
+          <a class="navbar-item has-text-weight-bold has-text-link" href={{ person }}>
+                  <figure class="image">
+  <img class="is-rounded" src="{{ data[person]['image']}}">
+</figure>  &nbsp; &nbsp; {{ data[person]["name"] }}
           </a>
           {% else %}
-            <a class="navbar-item" href={{ person }}>
-            {{ data[person]["name"] }}
+          <a class="navbar-item" href={{ person }}>
+            <figure class="image">
+  <img class="is-rounded" src="{{ data[person]['image']}}">
+</figure> &nbsp; &nbsp;{{ data[person]["name"] }}
           </a>
 
           {% endif %}
@@ -404,6 +408,8 @@
           </p>
 
       </div>
+
+      <a href="#top" class="button is-small">Back to top</a>
 
 
     </div>
