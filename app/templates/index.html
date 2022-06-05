@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{{title|title}}'s Portfolio</title>
+  <title>{{ data[title]['name']|title}}'s Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="{{ data[title]['image']}}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <script src="https://kit.fontawesome.com/6f97194b39.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../static/styles/main.css">
@@ -142,7 +143,7 @@
   <section class="hero has-nft-bg is-fullheight">
     <div class="hero-body">
       <div class="container has-text-centered">
-        <h1 class="title is-1 is-uppercase has-text-white green-outlined">Education</h1>
+        <h1 class="title is-1 is-uppercase has-text-white">Education</h1>
 
         {% for school in data[title]['schools'] %}
         <div class="block">
@@ -191,12 +192,21 @@
                   <!-- <h1 class="subtitle is-3">{{project.link}}</h1> -->
                   <div class="block is-centered">
                     <h1 class="title is-6">{{project.description}}</h1>
+                    
+                    <div class="tags  are-medium is-centered">
+                      {% for stack in project.stacks %}
+  <span class="tag is-rounded is-link is-light">{{stack}}</span>
+                      {% endfor %}
+</div>
+
                     <div class="tags is-centered">
-                      <a href={{project.link}}>
+                      
+                      <a href={{project.link}} target="_blank" rel="noreferrer noopener">
                       <button class="button is-large is-danger is-rounded">
                         <span class="icon is-medium">
                           <i class="fas fa-link"></i>
                         </span> 
+                          
                         <span>Link</span>
                       </button>
                       </a>
@@ -205,7 +215,7 @@
                 </div>
                 <div class="column">
                   <figure class="image is-2by1">
-                    <img src={{ project['image']}} />
+                    <img src="{{ project['image']}}"/>
                   </figure>
                 </div>
               </div>
@@ -318,7 +328,7 @@
 
 
         <buttons>
-          <a href={{data[title]['social'][1]['val']}}>
+          <a href={{data[title]['social'][1]['val']}} target="_blank" rel="noreferrer noopener">
             <button class="button is-large">
               <span class="icon is-medium">
                 <i class="fab fa-linkedin"></i>
@@ -327,7 +337,7 @@
             </button>
           </a>
 
-          <a href={{data[title]['social'][0]['val']}}>
+          <a href={{data[title]['social'][0]['val']}} target="_blank" rel="noreferrer noopener">
             <button class="button is-large">
               <span class="icon is-medium">
                 <i class="fab fa-github"></i>
@@ -356,6 +366,16 @@
         </strong>
 
       </div>
+
+          <div class="block">
+
+      
+          <p>
+            Made with <i class="fa-solid fa-heart"></i> in Detroit, Edmonton, and Markham
+          </p>
+
+      </div>
+
 
     </div>
   </footer>

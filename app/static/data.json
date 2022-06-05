@@ -200,32 +200,35 @@
         ],
         "projects":[
             {
-                "title":"Formica",
-                "description":"An in-discord form service that allows you to fill in forms via a discord bot. You can create and manage forms, as well as manage your responses via a web interface.",
-                "image":"http://droplr.com/wp-content/uploads/2020/09/discord-bots-e1635362784159.png",
-                "link":"https://github.com/felixfaisal/formica"
+                "title":"TA Management System",
+                "description":"TA Management System provides connections between instructors and students that are assigned as TAs, or those who are willing to be future TAs in Computing Science courses.",
+                "image":"https://storage.googleapis.com/justinmonteza/Portfolio/TA.png",
+                "link":"https://ua-compsci-ta.ca/",
+                "stacks": ["Django", "PostgreSQL", "React", "Google OAuth", "MUI"]
             },
             {
-                "title":"Don't Fear the Reaper!",
-                "description":"A 2D hide n' seek game, where you can play as the grim reaper where the objective is to hunt down the TBD (To Be Deceased). Or, you can play as the TBD, with a goal of escaping the reaper's catacombs before he finds you.",
-                "image":"http://droplr.com/wp-content/uploads/2020/09/discord-bots-e1635362784159.png",
-                "link":"https://github.com/n-maido/dont-fear-the-reaper"
+                "title":"MedsToGo",
+                "description":"Allows users to order their prescription medication conveniently from the comfort of their own homes",
+                "image":"https://storage.googleapis.com/justinmonteza/Portfolio/MedsToGo.png",
+                "link":"http://www.medstogo.tech/",
+                "stacks": ["React", "Bootstrap", "MongoDB", "Express.js", "Node.js"]
             },
             {
-                "title":"The Education Game",
-                "description":"An educational game for children with autism, intended to improve their development in 3 skill areas: arithmetic, emotion recognition, and fine motor skills.",
-                "image":"http://droplr.com/wp-content/uploads/2020/09/discord-bots-e1635362784159.png",
-                "link":"https://github.com/n-maido/the-education-game"
+                "title":"Appraisal",
+                "description":"An experiment tracking tool with in-depth analysis. Experiment result are visible to all among users by default, allowing all users to discuss and track experiments of one another.",
+                "image":"https://storage.googleapis.com/justinmonteza/Portfolio/AppraisalApp.png",
+                "link":"https://github.com/CMPUT301W21T11/Appraisal",
+                "stacks": ["Java", "Firebase Firestore", "Firebase Authentication", "Google Maps API"]
             }
         ],
         "social":[
             {
                 "name":"LinkedIn",
-                "val":"https://www.linkedin.com/in/nhimaido/"
+                "val":"https://www.linkedin.com/in/justinmonteza/"
             },
             {
                 "name":"GitHub",
-                "val":"https://github.com/n-maido"
+                "val":"https://github.com/jmonteza"
             },
             {
                 "name":"nhi_maido@outlook.com"
@@ -246,15 +249,15 @@
         ],
         "hobbies":[
             {
-                "image":"https://media.timeout.com/images/105863223/750/422/image.jpg",
-                "hobby":"Star Wars"
+                "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/1_moraine_lake_pano_2019.jpg/2560px-1_moraine_lake_pano_2019.jpg",
+                "hobby":"Travelling"
             },
             {
                 "image":"https://hips.hearstapps.com/amv-prod-gp.s3.amazonaws.com/gearpatrol/wp-content/uploads/2019/11/Mechanical-Keyboard-Buying-Guide-Gear-Patrol-Feature.jpg?crop=1xw:0.65xh;center,top&resize=1200:*",
-                "hobby":"Mechanical Keyboards"
+                "hobby":"Books"
             },
             {
-                "image":"https://assets-prd.ignimgs.com/2021/12/30/36190303-image-7-1640880187142.png",
+                "image":"https://images.ctfassets.net/vfkpgemp7ek3/3098815104/c9eb4e66e6dcd3efec72034b80291feb/call-of-duty-mobile-first-week-china.jpg",
                 "hobby":"Video Games"
             }
         ], 
