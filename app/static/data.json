@@ -92,7 +92,7 @@
                 "description":"A web application that allows user to input their current ingredients and will receive recipes to cook with those ingredients. Features an image detection model to input ingredients using a picture.",
                 "image":"../static/img/cookhack.png",
                 "link":"https://devpost.com/software/cookhack",
-                "stacks": ["CSS", "Cython", "Firebase", "Flask", "HTML", "JavaScript", "MongoDB", "Python", "React", "Redux"],
+                "stacks": ["CSS", "Python", "Firebase", "Flask", "HTML", "JavaScript", "MongoDB", "Python", "React", "Redux"],
                 "repo": "https://github.com/KevinYuCode/QHACKS_2022"
             },
             {
