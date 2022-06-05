@@ -34,16 +34,17 @@
   </div>
 
     <div class="navbar-menu">
+      
         <div class="navbar-start" id="topnavbar">
           {% for person in data %}
           {% if title == person %}
-          <a class="navbar-item has-text-weight-bold has-text-link" href={{ person }}>
+          <a class="navbar-item has-text-weight-bold has-text-warning-dark" href={{ person }}>
                   <figure class="image">
   <img class="is-rounded" src="{{ data[person]['image']}}">
 </figure>  &nbsp; &nbsp; {{ data[person]["name"] }}
           </a>
           {% else %}
-          <a class="navbar-item" href={{ person }}>
+          <a class="navbar-item has-text-info-dark" href={{ person }}>
             <figure class="image">
   <img class="is-rounded" src="{{ data[person]['image']}}">
 </figure> &nbsp; &nbsp;{{ data[person]["name"] }}
@@ -53,6 +54,9 @@
 
           {% endfor %}
       </div>
+
+
+
       <div class="navbar-end">
         <a class="navbar-item">
           <p id="btnarrow" onclick="show_hide()" padding="50px">
@@ -62,7 +66,7 @@
           </p>
           <script src=" {{ url_for('static', filename='js/arrow.js') }}"></script>
         </a>
-        <a class="navbar-item"></a>
+       
       </div>
     </div>
   </nav>
@@ -279,6 +283,7 @@
     </div>
   </section>
 
+{% if data[title]['trivias'] %}
 
  <section class="hero is-black has-jungle-bg is-fullheight p-6 has-text-centered">
 
@@ -304,6 +309,8 @@
 
 
 </section>
+
+{% endif %}
 
   <section id="hobbies" class="hero has-nft-bg is-fullheight">
     <div class="hero-body">
@@ -470,7 +477,7 @@
 
       
           <p>
-            Made with <i class="fa-solid fa-heart"></i> in Detroit, Edmonton, and Markham
+            Made with &nbsp; <i class="fa-solid fa-heart"></i> &nbsp; in Detroit, Edmonton, and Markham
           </p>
 
       </div>
