@@ -18,7 +18,7 @@ with open(filename) as f:
 
 @app.route("/<any(logan, hadi, justin):name>", methods=['GET'])
 def index(name):
-    anchors = ["Experience", "Projects", "Hobbies", "Map", "Contact"]
+    anchors = ["Experience", "Education", "Projects", "Hobbies", "Map", "Contact"]
     return render_template('index.html', title=name, url=os.getenv("URL"), data=data, anchors=anchors)
 
 @app.route("/contact", methods=['POST'])
