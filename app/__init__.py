@@ -1,8 +1,6 @@
 from http.client import HTTPResponse
 import os
-import re
 import json
-from tkinter import ANCHOR
 from flask import Flask, render_template, request, url_for, redirect, Response
 from dotenv import load_dotenv
 from .gmail.gmail import send_email

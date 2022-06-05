@@ -3,29 +3,6 @@
         "name":"Hadi Chaaban",
         "about":"I'm an aspiring software developer from Detroit, Michigan. In my spare time, I enjoy playing video games and making electronics. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
         "image":"https://media-exp1.licdn.com/dms/image/C5603AQHg8GeQlIQBKA/profile-displayphoto-shrink_800_800/0/1651090159726?e=1659571200&v=beta&t=FDrDc1ybcS05fHwMpSxAZNVPgTkdKeC803wYavua_Vk",
-        "experience":[
-            {
-                "title":"Software Developer Itern",
-                "location":"San Francisco, California",
-                "range":"May 2020 - August 2021",
-                "info":"Developed performant, scalable and highly available applications using Kotlin, Docker, Apache Ignite\nManaged infrastructure using Terraform, Jenkins, and Ansible.\nImplemented delta query APIs resulting in a 99% decrease in payload and a 32-71% decrease in latency",
-                "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Uber_logo_2018.svg/2560px-Uber_logo_2018.svg.png"
-            },
-            {
-                "title":"Software Developer Itern",
-                "location":"Redmond, Washington",
-                "range":"May 2020 - August 2021",
-                "info":"Developed performant, scalable and highly available applications using Kotlin, Docker, Apache Ignite\nManaged infrastructure using Terraform, Jenkins, and Ansible.\nImplemented delta query APIs resulting in a 99% decrease in payload and a 32-71% decrease in latency",
-                "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/2560px-Microsoft_logo_%282012%29.svg.png"
-            },
-            {
-                "title":"Software Developer Itern",
-                "location":"Mountain View, California",
-                "range":"May 2020 - August 2021",
-                "info":"Developed performant, scalable and highly available applications using Kotlin, Docker, Apache Ignite\nManaged infrastructure using Terraform, Jenkins, and Ansible.\nImplemented delta query APIs resulting in a 99% decrease in payload and a 32-71% decrease in latency",
-                "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
-            }
-        ],
         "projects":[
             {
                 "title":"Formica",
@@ -70,7 +47,8 @@
                     "Database Management Systems",
                     "Operating System Concepts"
                 ],
-                "campus":"https://umdearborn.edu/sites/default/files/group-library/37391/university_center.jpg"
+                "campus":"https://umdearborn.edu/sites/default/files/group-library/37391/university_center.jpg",
+                "location": "Dearborn, United States"
             }
         ],
         "hobbies":[
@@ -150,7 +128,8 @@
                     "Computer Architecture",
                     "Information Structures"
                 ],
-                "campus":"https://www.queensu.ca/admission/sites/default/files/assets/20200923_220147458_iOS_1.jpg"
+                "campus":"https://www.queensu.ca/admission/sites/default/files/assets/20200923_220147458_iOS_1.jpg", 
+                "location": "Kingston, Canada"
             }
         ],
         "hobbies":[
@@ -253,7 +232,8 @@
                     "Database Management Systems",
                     "Operating System Concepts"
                 ],
-                "campus":"https://www.ualberta.ca/external-relations/media-library/community-relations/photos/12784-06-115-athabasca02.png"
+                "campus":"https://www.ualberta.ca/external-relations/media-library/community-relations/photos/12784-06-115-athabasca02.png",
+                "location": "Edmonton, Canada"
             }
         ],
         "hobbies":[
