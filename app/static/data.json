@@ -276,6 +276,62 @@
                 "lng": -118.0814,
                 "name": "Jasper"
             }
+        ], 
+        "trivias": [
+            [
+                {
+                 "question": "Coding since", 
+                 "answer": "2015" 
+                },
+                {
+                 "question": "Favourite Language", 
+                 "answer": "Python" 
+                },
+                {
+                 "question": "First Language", 
+                 "answer": "HTML" 
+                },
+                {
+                 "question": "Dreaded Language", 
+                 "answer": "Assembly" 
+                }
+            ],
+            [
+                {
+                 "question": "Favourite CS Concept", 
+                 "answer": "TCP/IP" 
+                },
+                {
+                 "question": "Hated CS Concept", 
+                 "answer": "Recursion" 
+                },
+                {
+                 "question": "Code Editor", 
+                 "answer": "VSCode" 
+                },
+                {
+                 "question": "Editor Theme", 
+                 "answer": "One Dark Pro" 
+                }
+            ],
+            [
+                {
+                 "question": "Listening to", 
+                 "answer": "As It Was by Harry Styles" 
+                },
+                {
+                 "question": "Night Owl or Early Bird", 
+                 "answer": "Night Owl" 
+                },
+                {
+                 "question": "Unforgettable Tech Fail", 
+                 "answer": "Setting up a server firewall and forgetting to allow SSH" 
+                },
+                {
+                 "question": "Website you visit the most", 
+                 "answer": "Stackoverflow" 
+                }
+            ]
         ]
     }
 }

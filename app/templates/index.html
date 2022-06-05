@@ -279,6 +279,32 @@
     </div>
   </section>
 
+
+ <section class="hero is-black is-fullheight p-6 has-text-centered">
+
+  <h1 class="title is-1 has-text-white is-uppercase">Trivia Board</h1>
+
+{% for trivia in data[title]['trivias'] %}
+
+<div class="tile is-ancestor">
+  {% for item in trivia %}
+  <div class="tile is-parent">
+    <article class="tile is-child box">
+      <p class="subtitle has-text-black">{{item.question}}</p>
+      <p class="title has-text-black">{{item.answer}}</p>
+    </article>
+  </div>
+
+{% endfor %}
+
+</div>
+
+{% endfor %}
+
+
+
+</section>
+
   <section id="hobbies" class="hero has-hobbies-bg is-fullheight">
     <div class="hero-body">
       <div class="container has-text-centered p-6">
