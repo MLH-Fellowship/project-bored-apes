@@ -1,26 +1,20 @@
 {
     "hadi":{
         "name":"Hadi Chaaban",
-        "about":"I'm an aspiring software developer from Detroit, Michigan. In my spare time, I enjoy playing video games and making electronics. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "about":"I'm an aspiring software developer from Metro Detroit, Michigan. In my spare time, I enjoy playing video games and making electronics. I also am an amatuer photographer and videographer.",
         "image":"https://media-exp1.licdn.com/dms/image/C5603AQHg8GeQlIQBKA/profile-displayphoto-shrink_800_800/0/1651090159726?e=1659571200&v=beta&t=FDrDc1ybcS05fHwMpSxAZNVPgTkdKeC803wYavua_Vk",
         "projects":[
             {
-                "title":"Formica",
-                "description":"An in-discord form service that allows you to fill in forms via a discord bot. You can create and manage forms, as well as manage your responses via a web interface.",
-                "image":"http://droplr.com/wp-content/uploads/2020/09/discord-bots-e1635362784159.png",
-                "link":"https://github.com/felixfaisal/formica"
+                "title":"Weather App",
+                "description":"An android based application that uses Google Play services and location services to fetch and display information from a Weather API.",
+                "image":"https://cdn.discordapp.com/attachments/981276494825414797/983415015329648661/Android_App.png",
+                "link":"https://github.com/HadiCya/WeatherApp"
             },
             {
-                "title":"Don't Fear the Reaper!",
-                "description":"A 2D hide n' seek game, where you can play as the grim reaper where the objective is to hunt down the TBD (To Be Deceased). Or, you can play as the TBD, with a goal of escaping the reaper's catacombs before he finds you.",
-                "image":"http://droplr.com/wp-content/uploads/2020/09/discord-bots-e1635362784159.png",
-                "link":"https://github.com/n-maido/dont-fear-the-reaper"
-            },
-            {
-                "title":"The Education Game",
-                "description":"An educational game for children with autism, intended to improve their development in 3 skill areas: arithmetic, emotion recognition, and fine motor skills.",
-                "image":"http://droplr.com/wp-content/uploads/2020/09/discord-bots-e1635362784159.png",
-                "link":"https://github.com/n-maido/the-education-game"
+                "title":"Bookstore",
+                "description":"A python based bookstore that uses the Django framework and jquery. Uses SQLite3 in order to host a collection of books and session handling to store cookies in users web browser for a cart.",
+                "image":"https://cdn.discordapp.com/attachments/981276494825414797/983414805262135356/Screen_Shot_2022-06-06_at_12.51.43_PM.png",
+                "link":"https://github.com/HadiCya/Bookstore"
             }
         ],
         "social":[
@@ -43,8 +37,8 @@
                 "degree":"Bachelor of Science",
                 "course":"Computer Science",
                 "favourites":[
-                    "Computer Networks",
-                    "Database Management Systems",
+                    "Computer Security",
+                    "Java Programming",
                     "Operating System Concepts"
                 ],
                 "campus":"https://umdearborn.edu/sites/default/files/group-library/37391/university_center.jpg",
@@ -53,17 +47,106 @@
         ],
         "hobbies":[
             {
-                "image":"https://media.timeout.com/images/105863223/750/422/image.jpg",
-                "hobby":"Star Wars"
+                "image":"https://cdn.discordapp.com/attachments/981276494825414797/983415413885009980/altoidsemulator.jpeg",
+                "hobby":"Making Electronics"
             },
             {
-                "image":"https://hips.hearstapps.com/amv-prod-gp.s3.amazonaws.com/gearpatrol/wp-content/uploads/2019/11/Mechanical-Keyboard-Buying-Guide-Gear-Patrol-Feature.jpg?crop=1xw:0.65xh;center,top&resize=1200:*",
-                "hobby":"Mechanical Keyboards"
+                "image":"https://i.pcmag.com/imagery/reviews/05oDWS6cGc0WVJM2rvEcjOv-1..v1600807382.jpg",
+                "hobby":"Taking Photos and Videos"
             },
             {
-                "image":"https://assets-prd.ignimgs.com/2021/12/30/36190303-image-7-1640880187142.png",
+                "image":"https://images.livemint.com/img/2020/06/03/1600x900/Valorant_1591218052835_1591218061187.jpg",
                 "hobby":"Video Games"
             }
+        ],
+        "locations":[
+            {
+                "lat":39.5501,
+                "lng":-105.7821,
+                "name":"Colorado"
+            },
+            {
+                "lat":36.778259,
+                "lng":-119.417931,
+                "name":"California"
+            },
+            {
+                "lat":36.174465,
+                "lng": -86.767960,
+                "name":"Tennesee"
+            },
+            {
+                "lat":27.994402,
+                "lng": -81.760254,
+                "name":"Florida"
+            },
+            {
+                "lat":33.888630,
+                "lng": 35.495480,
+                "name":"Lebanon"
+            },
+            {
+                "lat":44.7631,
+                "lng": -85.6206,
+                "name":"Traverse City"
+            }
+
+        ],
+        "trivias": [
+            [
+                {
+                 "question": "Coding since", 
+                 "answer": "2018" 
+                },
+                {
+                 "question": "Favourite Language", 
+                 "answer": "Java" 
+                },
+                {
+                 "question": "First Language", 
+                 "answer": "Java" 
+                },
+                {
+                 "question": "Dreaded Language", 
+                 "answer": "Assembly" 
+                }
+            ],
+            [
+                {
+                 "question": "Favourite CS Field", 
+                 "answer": "Game Development" 
+                },
+                {
+                 "question": "Hated CS Field", 
+                 "answer": "Front End Web-Dev" 
+                },
+                {
+                 "question": "Code Editor", 
+                 "answer": "VSCode" 
+                },
+                {
+                 "question": "Editor Theme", 
+                 "answer": "Dark Mode" 
+                }
+            ],
+            [
+                {
+                 "question": "Listening to", 
+                 "answer": "United in Grief by Kendrick Lamar" 
+                },
+                {
+                 "question": "Night Owl or Early Bird", 
+                 "answer": "Night Owl" 
+                },
+                {
+                 "question": "Favourite Movie", 
+                 "answer": "The Departed" 
+                },
+                {
+                 "question": "Favourite TV Show", 
+                 "answer": "Mr. Robot" 
+                }
+            ]
         ]
     },
     "logan":{
