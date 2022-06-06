@@ -29,7 +29,7 @@ def contact():
         receiver_name = request.form.get("receiver_name")
         receiver_email = request.form.get("receiver_email")
         formatted_message = "Name: {}\nEmail: {}\nMessage: {}".format(sender_name, sender_email, message)
-        formatted_confirmation = "Your message for {} has been received.".format(receiver_name)
+        formatted_confirmation = "Hello {},\nYour message for {} has been received.\nThank you.".format(sender_name, receiver_name)
         send_email(receiver_name, receiver_email, subject, formatted_message)
         send_email(sender_name, sender_email, "Email Confirmation", formatted_confirmation)
         return '', 204
