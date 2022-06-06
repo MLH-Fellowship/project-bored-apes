@@ -1,108 +1,68 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta property="og:title" content="{{ data[title]['name']|title}}'s Portfolio">
-        <meta property="og:description" content="{{ data[title]['name']|title}}'s Portfolio">
-        <meta property="og:url" content="{{ url }}">
-        <meta propery="og:author" content="Hadi Chaaban, Logan Hoogendijk, Justin Monteza">
-        <title>{{data[title]['name']|title}}'s Portfolio</title>
-        <link rel="icon" type="image/x-icon" href="{{ data[title]['image']}}">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-        <script src="https://kit.fontawesome.com/6f97194b39.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="../static/styles/main.css">
-    </head>
-    <body>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta property="og:title" content="{{ data[title]['name']|title}}'s Portfolio">
+      <meta property="og:description" content="{{ data[title]['name']|title}}'s Portfolio">
+      <meta property="og:url" content="{{ url }}">
+      <meta propery="og:author" content="Hadi Chaaban, Logan Hoogendijk, Justin Monteza">
+      <title>{{data[title]['name']|title}}'s Portfolio</title>
+      <link rel="icon" type="image/x-icon" href="{{ data[title]['image']}}">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+      <script src="https://kit.fontawesome.com/6f97194b39.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="../static/styles/main.css">
+   </head>
+   <body>
+      {% include 'components/navigation.html' %}
+      <div id="content">{% block content %}{% endblock %}</div>
+      <script src="https://kit.fontawesome.com/1dcdba3ff6.js" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.js"
+         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+         crossorigin="anonymous"></script>
+      <script src=" {{ url_for('static', filename='js/arrow.js') }}"></script>
+      <script
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAt4EkwGj2-VGm0Kw3VF-0-5EpKveUAXAA&callback=initMap&libraries=&v=weekly"
+         async></script>
+      <script type="text/javascript" src=" {{ url_for('static', filename='js/app.js') }}"></script>
+      <script>
+         // Initialize and add the map
+         function initMap() {
          
-        {% include 'components/navigation.html' %}
-
-        <div id="content">{% block content %}{% endblock %}</div>
-        
-        <script src="https://kit.fontawesome.com/1dcdba3ff6.js" crossorigin="anonymous"></script>
-        
-        <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAt4EkwGj2-VGm0Kw3VF-0-5EpKveUAXAA&callback=initMap&libraries=&v=weekly"
-            async></script>
-        <script>
-            // Initialize and add the map
-            function initMap() {
-            
-              const newYork = {
-                lat: 40.730610,
-                lng: -73.935242
-              };
-            
-              // Create the map, centered at gfg_office
-              const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 3,
-                center: newYork,
-              });
-            
-              var places = {{data|tojson}};
-            
-              var infowindow = new google.maps.InfoWindow();
-            
-              const locations = places["{{title}}"].locations;
-            
-              var marker, i;
-            
-              for (i = 0; i < locations.length; i++){
-              
-              marker = new google.maps.Marker({
-                position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
-                map: map
-              });
-            
-              google.maps.event.addListener(marker, 'click', (function(marker, i) {
-                return function() {
-                  infowindow.setContent(locations[i].name);
-                  infowindow.open(map, marker);
-                }
-              })(marker, i));
-              }
-            }
-        </script>
-        <script src="https://code.jquery.com/jquery-3.5.1.js"
-            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-            crossorigin="anonymous"></script>
-        <script type="text/javascript">
-            $(document).on('submit','#contact-form',function(e)
-                           {
-              console.log('hello');
-              e.preventDefault();
-              $.ajax({
-                type:'POST',
-                url:'/contact',
-                data:{
-                  name:$("#name").val(),
-                  subject:$("#subject").val(),
-                  email:$("#email").val(),
-                  message:$("#message").val(),
-                  receiver_name:$("#receiver_name").val(),
-                  receiver_email:$("#receiver_email").val()
-                },
-                success:function()
-                {
-                  $('input[type="text"],textarea').val('');
-                  $("#submit").remove()
-                  $("#success-notification").text = "Message successfully sent"
-                }
-              })
-            });
-        </script>
-        <script text="text/javascript">
-            $(document).ready(function() {
-            
-            // Check for click events on the navbar burger icon
-            $(".navbar-burger").click(function() {
-            
-              // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-              $(".navbar-burger").toggleClass("is-active");
-              $(".navbar-menu").toggleClass("is-active");
-            
-            });
-            });
-        </script>
-    </body>
+           const newYork = {
+             lat: 40.730610,
+             lng: -73.935242
+           };
+         
+           // Create the map, centered at gfg_office
+           const map = new google.maps.Map(document.getElementById("map"), {
+             zoom: 3,
+             center: newYork,
+           });
+         
+           var places = {{data|tojson}};
+         
+           var infowindow = new google.maps.InfoWindow();
+         
+           const locations = places["{{title}}"].locations;
+         
+           var marker, i;
+         
+           for (i = 0; i < locations.length; i++){
+           
+           marker = new google.maps.Marker({
+             position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
+             map: map
+           });
+         
+           google.maps.event.addListener(marker, 'click', (function(marker, i) {
+             return function() {
+               infowindow.setContent(locations[i].name);
+               infowindow.open(map, marker);
+             }
+           })(marker, i));
+           }
+         }
+      </script>
+   </body>
 </html>
