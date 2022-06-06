@@ -143,10 +143,10 @@ def get_credentials():
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                'gmail/credentials.json', SCOPES)
+                'app/gmail/credentials.json', SCOPES)
             creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
-        with open('gmail/token.json', 'w') as token:
+        with open('app/gmail/token.json', 'w') as token:
             token.write(creds.to_json())
 
     try:
