@@ -1,21 +1,19 @@
-{% extends "base.html" %} 
-{% block title %} Hobbies {% endblock %}
-{% block content %}
-<section class="hero has-hobbies-bg is-fullheight">
+<!-- Hobbies Start -->
+<section id="hobbies" class="hero has-nft-bg is-fullheight">
     <div class="hero-body">
-        <div class="container has-text-centered">
-            <h1 class="title is-1 is-uppercase blue-outlined">Hobbies</h1>
+        <div class="container has-text-centered p-6">
+            <h1 class="title is-1 is-uppercase has-text-white">Hobbies</h1>
             <div class="columns">
-                {% for hobbie in hobbies %}
+                {% for hobbies in data[title]['hobbies'] %}
                 <div class="column">
                     <div class="card">
                         <div class="card-content">
                             <figure class="image is-3by2">
-                                <img src="{{hobbie.image}}">
+                                <img src={{ hobbies['image'] }}>
                             </figure>
-                            <br/>
+                            <br />
                             <p class="title">
-                                {{hobbie.hobby}}
+                                {{hobbies['hobby']}}
                             </p>
                         </div>
                     </div>
@@ -25,4 +23,4 @@
         </div>
     </div>
 </section>
-{% endblock %}
+<!-- Hobbies End -->

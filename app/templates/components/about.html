@@ -1,0 +1,31 @@
+<!-- About Me Start -->
+<section class="hero has-jungle-bg is-fullheight p-6">
+    <div class="hero-body p-6">
+        <div class="container has-text-centered">
+            <div class="column is-8 is-offset-2">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="profile">
+                            <div id="profile-picture" class="profile-picture">
+                                <img src="{{ data[title]['image']}}">
+                            </div>
+                        </div>
+                        <p class="title is-4"> {{ data[title]['name'] }} </p>
+                    </div>
+                </div>
+                <div class="card" class="has-background-white about-column">
+                    <div class="box about">
+                        <p class="title is-5">About Me</p>
+                        <p class="subtitle">{{ data[title]['about'] }}</p>
+                        <div class="buttons is-centered">
+                            {% for anchor in anchors %}
+                            <a href="{{ '#' ~ anchor|lower}}" class="button">{{anchor|lower}}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Me End -->
