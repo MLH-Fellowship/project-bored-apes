@@ -1,15 +1,13 @@
-{% extends "base.html" %} 
-{% block title %} Education {% endblock %}
-{% block content %}
-<section class="hero has-nft-bg is-fullheight">
+<!-- Education Start -->
+<section id="education" class="hero has-jungle-bg is-fullheight">
     <div class="hero-body">
-        <div class="container has-text-centered">
+        <div class="container has-text-centered p-6">
             <h1 class="title is-1 is-uppercase has-text-white">Education</h1>
-            {% for school in schools %}
+            {% for school in data[title]['schools'] %}
             <div class="block">
                 <div class="card">
                     <div class="card-content">
-                        <div class="columns is-gapless is-vcentered is-centered">
+                        <div class="columns is-vcentered is-centered">
                             <div class="column">
                                 <img src="{{school.logo}}" width="300" height="300">
                                 <h1 class="title is-1">{{school.degree}}</h1>
@@ -21,14 +19,13 @@
                                         <span class="tag is-large is-danger is-rounded">{{favourite}}</span>
                                         {% endfor %}
                                     </div>
-
-                            
                                 </div>
                             </div>
                             <div class="column">
                                 <figure class="image">
                                     <img src="{{school.campus}}" />
                                 </figure>
+                                <span><i class="fa-solid fa-location-dot"></i> &nbsp; {{school.location}}</span>
                             </div>
                         </div>
                     </div>
@@ -38,4 +35,4 @@
         </div>
     </div>
 </section>
-{% endblock %}
+<!-- Education End -->

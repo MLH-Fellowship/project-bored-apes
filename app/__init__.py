@@ -17,7 +17,7 @@ with open(filename) as f:
 @app.route("/<any(logan, hadi, justin):name>", methods=['GET'])
 def index(name):
     anchors = ["Experience", "Education", "Projects", "Trivia", "Hobbies", "Map", "Contact"]
-    return render_template('index.html', title=name, url=os.getenv("URL"), data=data, anchors=anchors)
+    return render_template('pages/index.html', title=name, url=os.getenv("URL"), data=data, anchors=anchors)
 
 @app.route("/contact", methods=['POST'])
 def contact():
@@ -38,4 +38,4 @@ def contact():
 @app.errorhandler(404)
 def page_not_found(e):
     # Set the 404 status explicitly
-    return render_template('404.html'), 404
+    return render_template('pages/404.html'), 404
