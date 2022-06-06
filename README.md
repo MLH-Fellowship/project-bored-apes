@@ -1,6 +1,19 @@
-# Production Engineering - Week 1 - Portfolio Site
+# Bored Apes Portfolio - MLH Fellowship Orientation Hackathon
 
-Welcome to the MLH Fellowship! During Week 1, you'll be working with Flask to build a portfolio site. This site will be the foundation for activities we do in future weeks so spend time this week making it your own and reflect your personality!
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
+[![GitHub contributors](https://badgen.net/github/contributors/MLH-Fellowship/project-bored-apes)](https://github.com/MLH-Fellowship/project-bored-apes/graphs/contributors)
+
+
+<p align="center">
+  <img src="https://storage.googleapis.com/justinmonteza/logo.png" alt="Material Bread logo">
+</p>
+
+Portfolio inspired by Bored Apes, unique digital collectibles living on the Ethereum blockchain 
+
+## Screenshot
+
+![Bored Apes Logo](https://storage.googleapis.com/justinmonteza/Screen%20Shot%202022-06-06%20at%2011.11.51%20AM.png)
 
 ## Tasks
 
@@ -32,16 +45,29 @@ For each of these tasks, you should create an [Issue](https://docs.github.com/en
 
 ## Getting Started
 
-You don't need to submit any pull requests to thie repository. You need to do all your work here.
+You don't need to submit any pull requests to this repository. You need to do all your work here.
+
+## Prerequisites
+- Flask
+- Google Maps API
+- Gmail API
 
 ## Installation
 
 Make sure you have python3 and pip installed
 
-Create and activate virtual environment using virtualenv
+Create and activate virtual environment using venv
+
+**Bash**
 ```bash
 $ python -m venv python3-virtualenv
 $ source python3-virtualenv/bin/activate
+```
+
+**CMD**
+```cmd
+> python -m venv python3-virtualenv
+> python3-virtualenv/bin/activate
 ```
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all dependencies!
@@ -50,14 +76,27 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all dep
 pip install -r requirements.txt
 ```
 
+## Tech Stack
+Python, HTML, CSS, JavaScript, JSON, Gmail API, Google Maps API, jQuery, Flask, Bulma
+
 ## Usage
 
 Create a .env file using the example.env template (make a copy using the variables inside of the template)
 
 Start flask development server
+
+**Bash**
 ```bash
 $ export FLASK_ENV=development
+$ export FLASK_DEBUG=1
 $ flask run
+```
+
+**CMD**
+```cmd
+> set FLASK_ENV=development
+> set FLASK_DEBUG=1
+> flask run
 ```
 
 You should get a response like this in the terminal:
@@ -77,3 +116,23 @@ You'll now be able to access the website at `localhost:5000` or `127.0.0.1:5000`
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
+
+Please see [CONTRIBUTING.md](./CONTRIBUTING.md).
+
+## Roadmap
+- Integrate database
+- Add a blogging feature
+- Host it on the cloud
+- Add automated tests
+
+## License
+
+Bored Apes Portfolio is [MIT licensed](./LICENSE).
+
+## Authors
+Justin Monteza [@jmonteza](https://github.com/jmonteza) 
+
+Logan Hoogendijk [@LoganHoogendijk](https://github.com/LoganHoogendijk) 
+
+Hadi Chaaban [@HadiCya](https://github.com/HadiCya) 
+
