@@ -27,11 +27,7 @@ html {
 
 .green-outlined {
     color: white;
-    text-shadow:
-        -1px -1px 0 darkgreen,
-        1px -1px 0 darkgreen,
-        -1px 1px 0 darkgreen,
-        1px 1px 0 darkgreen;
+    text-shadow: -1px -1px 0 darkgreen, 1px -1px 0 darkgreen, -1px 1px 0 darkgreen, 1px 1px 0 darkgreen;
     font-size: 50px;
     font-weight: 700;
 }
@@ -43,11 +39,7 @@ html {
 
 .blue-outlined {
     color: lightgray;
-    text-shadow:
-        -1px -1px 0 darkcyan,
-        1px -1px 0 darkcyan,
-        -1px 1px 0 darkcyan,
-        1px 1px 0 darkcyan;
+    text-shadow: -1px -1px 0 darkcyan, 1px -1px 0 darkcyan, -1px 1px 0 darkcyan, 1px 1px 0 darkcyan;
 }
 
 .about {
@@ -63,19 +55,20 @@ html {
     text-align: center;
     height: 240px;
 }
+
 .profile img {
     border-radius: 50%;
     max-width: 100%;
     max-height: 100%;
     margin-left: auto;
     margin-right: auto;
-    display: block;        
+    display: block;
     padding: 20px;
 }
 
 .profile .profile-picture {
-margin-bottom: 5px;
-height: 240px;
+    margin-bottom: 5px;
+    height: 240px;
 }
 
 .card {
