@@ -13,7 +13,7 @@ filename = os.path.join(app.static_folder, 'data.json')
 with open(filename) as f:
     data = json.load(f)
 
-@app.route("/", defaults={"name": "logan"})
+@app.route("/", defaults={"name": "justin"})
 @app.route("/<any(logan, hadi, justin):name>", methods=['GET'])
 def index(name):
     anchors = ["Experience", "Education", "Projects", "Trivia", "Hobbies", "Map", "Contact"]
