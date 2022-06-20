@@ -19,4 +19,4 @@ pip --quiet install -r requirements.txt
 tmux new-session -d -s flask-portfolio
 
 # Run flask
-tmux send-keys 'flask run --host=0.0.0.0' Enter
+tmux send-keys 'flask run --host=0.0.0.0 --port 80' Enter
