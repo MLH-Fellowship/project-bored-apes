@@ -14,7 +14,7 @@ with open(filename) as f:
     data = json.load(f)
 
 @app.route("/", defaults={"name": "justin"})
-@app.route("/<any(logan, hadi, justin):name>", methods=['GET'])
+@app.route("/<any(justin):name>", methods=['GET'])
 def index(name):
     anchors = ["Experience", "Education", "Projects", "Trivia", "Hobbies", "Map", "Contact"]
     return render_template('pages/index.html', title=name, url=os.getenv("URL"), data=data, anchors=anchors)
