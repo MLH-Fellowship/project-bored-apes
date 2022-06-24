@@ -3,6 +3,10 @@ from distutils.text_file import TextFile
 from http.client import HTTPResponse
 import os
 import json
+from unicodedata import name
+
+import urllib.parse
+import hashlib
 
 from django.forms import CharField, DateTimeField
 from flask import Flask, render_template, request, url_for, redirect, Response
@@ -10,6 +14,7 @@ from dotenv import load_dotenv
 from .gmail.gmail import send_email
 from peewee import *
 from playhouse.shortcuts import model_to_dict
+
 
 import datetime
 
@@ -43,6 +48,9 @@ data = 0
 filename = os.path.join(app.static_folder, 'data.json')
 with open(filename) as f:
     data = json.load(f)
+
+
+
 
 
 @app.route("/", defaults={"name": "justin"})
@@ -114,8 +122,35 @@ def delete_timeline_post(id):
     return Response("Successfully deleted {}".format(id), 200)
 
 
+@app.route('/timeline', defaults={"name": "justin"})
+def timeline(name):
+    posts = [model_to_dict(p) for p in TimelinePost.select().order_by(TimelinePost.created_at.desc())]
+
+    # print(len(posts))
+
+
+
+
+    return render_template('pages/timeline.html', title=name, url=os.getenv("URL"), posts=posts, data=data)
+
 # curl --request POST http://localhost:5000/api/timeline_post -d 'name=Justin&email=justin.monteza@gmail.com&content=Just Added Database to my portfolio site!'
 
 # curl -X POST http://localhost:5000/api/timeline_post -d 'name=Justin&email=justin.monteza@gmail.com&content=Testing my endpoints with postman and curl.'
 
 # curl http://localhost:5000/api/timeline_post
+
+@app.template_global()
+def get_gravatar_url(email):
+
+    # Set your variables here
+    # email = "justin.monteza@gmail.com"
+    # default = "https://www.example.com/default.jpg"
+    # size = 40
+
+    # construct the url
+    gravatar_url = "https://www.gravatar.com/avatar/" + \
+        hashlib.md5(email.lower().encode('utf-8')).hexdigest()
+# gravatar_url += urllib.parse.urlencode({'d':default, 's':str(size)})
+    return gravatar_url
+
+# print(gravatar_url)
