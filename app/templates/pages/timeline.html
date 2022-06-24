@@ -4,6 +4,56 @@
 
 <div class="container is-fluid">
 
+
+<div class="columns is-centered">
+<div class="column is-three-quarters">
+
+<form id="form" method="post">
+
+<div class="field">
+  <div class="control has-icons-left has-icons-right">
+    <input name="name" class="input is-medium" type="text" placeholder="John Doe">
+    <span class="icon is-medium is-left">
+      <i class="fas fa-user"></i>
+    </span>
+  </div>
+</div>
+
+
+<div class="field">
+  <div class="control has-icons-left has-icons-right">
+    <input name="email" class="input is-medium" type="email" placeholder="email@address.com">
+    <span class="icon is-medium is-left">
+      <i class="fas fa-envelope"></i>
+    </span>
+  </div>
+</div>
+
+<div class="field">
+  <div class="control">
+    <textarea name="content" class="textarea is-medium" placeholder="Content"></textarea>
+  </div>
+</div>
+
+<div class="field is-grouped">
+  <div class="control">
+    <button type="submit" class="button is-link">Submit</button>
+  </div>
+  <!-- <div class="control">
+    <button class="button is-link is-light">Cancel</button>
+  </div> -->
+</div>
+
+
+</form>
+
+
+</div>
+
+
+
+</div>
+
      {% for post in posts %}
     
 <div class="columns is-centered">
@@ -14,19 +64,15 @@
 
   <header class="card-header">
     <p class="card-header-title">
-      {{post.created_at.strftime("%b %d, %Y (%I:%M %p)" )}}
+      {{post.created_at.strftime("%b %d, %Y (%I:%M:%S %p)" )}}
     </p>
-    <!-- <button class="card-header-icon" aria-label="more options">
-         <p class="has-text-weight-bold">{{post.created_at}}</p>
-    </button> -->
+    
   </header>
 
   
 
   <div class="card-content">
-    <!-- <p class="title">
-     Title
-    </p> -->
+  
 
     <div class="media">
       <div class="media-left">
@@ -61,45 +107,32 @@
 
 </div>
 
-<!-- 
-<div class="columns">
-    {% for post in posts %}
-  <div class="column is-full">
-    {{post.id}}
-    <br>
 
-<div class="card">
-  <div class="card-content">
-    <p class="title">
-      “There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”
-    </p>
-    <p class="subtitle">
-      Jeff Atwood
-    </p>
-  </div>
-  <footer class="card-footer">
-    <p class="card-footer-item">
-      <span>
-        View on <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
-      </span>
-    </p>
-    <p class="card-footer-item">
-      <span>
-        Share on <a href="#">Facebook</a>
-      </span>
-    </p>
-  </footer>
-</div> -->
+  <script>
+    function addSubmit(ev) {
+      ev.preventDefault();
+      fetch('/api/timeline_post', {
+        method: 'POST',
+        body: new FormData(this)
+      })
+        .catch(error => {
+            console.log("Error")
+        })
+        .finally(() => location.reload());
+    }
 
+    function parseJSON(response) {
+      console.log(response)
+      return response.json();
+    }
 
-<!-- </div>  -->
+    // function addShow(data) {
+    //   var span = document.getElementById('result');
+    //   span.innerText = data.result;
+    // }
 
-
-  
-
-<!-- {% endfor %} -->
-<!-- </div> -->
-
-<!-- </div> -->
+    var form = document.getElementById('form');
+    form.addEventListener('submit', addSubmit);
+  </script>
 
 {% endblock %}

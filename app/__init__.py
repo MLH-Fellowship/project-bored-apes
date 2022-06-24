@@ -122,14 +122,21 @@ def delete_timeline_post(id):
     return Response("Successfully deleted {}".format(id), 200)
 
 
-@app.route('/timeline', defaults={"name": "justin"})
+@app.route('/timeline', defaults={"name": "justin"}, methods=["GET"])
 def timeline(name):
+
+    if request.method == "POST":
+        form_name = request.form['name']
+        form_email = request.form['email']
+        form_content = request.form['content']
+
+        # print(form_name, form_email, form_content)
+        TimelinePost.insert(name=form_name, email=form_email, content=form_content).execute()
+
+        return redirect(url_for('timeline'))
+
+
     posts = [model_to_dict(p) for p in TimelinePost.select().order_by(TimelinePost.created_at.desc())]
-
-    # print(len(posts))
-
-
-
 
     return render_template('pages/timeline.html', title=name, url=os.getenv("URL"), posts=posts, data=data)
 
