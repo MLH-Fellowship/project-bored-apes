@@ -1,14 +1,11 @@
 from datetime import datetime
-from distutils.text_file import TextFile
-from http.client import HTTPResponse
+
 import os
 import json
 from unicodedata import name
 
-import urllib.parse
 import hashlib
 
-from django.forms import CharField, DateTimeField
 from flask import Flask, render_template, request, url_for, redirect, Response
 from dotenv import load_dotenv
 from .gmail.gmail import send_email
