@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Kill all sessions
-tmux kill-server
-
 # Change directory
 cd project-bored-apes
 
@@ -15,8 +12,10 @@ source python3-virtualenv/bin/activate
 # Install requirements
 pip --quiet install -r requirements.txt
 
-# Start a new tmux session
-tmux new-session -d -s flask-portfolio
+# Reload systemd files
+systemctl daemon-reload
 
-# Run flask
-tmux send-keys 'flask run --host=0.0.0.0 --port 80' Enter
+# Restart myportfolio service
+systemctl restart myportfolio
+
+
