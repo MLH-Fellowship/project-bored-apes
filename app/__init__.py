@@ -104,7 +104,7 @@ def get_specific_timeline_post(id):
 @app.route('/api/timeline_post/<id>', methods=['DELETE'])
 def delete_timeline_post(id):
     TimelinePost.delete_by_id(id)
-    return Response("Successfully deleted {}".format(id), 200)
+    return Response("Successfully deleted the timeline post with id {}".format(id), 200)
 
 
 @app.route('/timeline', defaults={"name": "justin"})

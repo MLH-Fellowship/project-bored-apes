@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Get random lorem ipsum
+# Get random lorem ipsum content
 content=$(curl -s http://asdfast.beobit.net/api/ | jq -r '.["text"]')
 
-# Post data with name, email, and lorem ipsum content
+# Post data with name, email, and random lorem ipsum content
 id=$(curl -s --request POST http://localhost:5000/api/timeline_post -d "name=Justin&email=justin.monteza@gmail.com&content=$(echo "$content")" | jq -r '.["id"]')
 
 # Get the post we just added using its id
@@ -19,5 +19,4 @@ else
 fi
 
 # Sends a delete request
-curl -X DELETE http://localhost:5000/api/timeline_post/$id
-
+curl -X DELETE http://localhost:5000/api/timeline_post/$id 
