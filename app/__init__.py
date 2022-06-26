@@ -1,10 +1,7 @@
-from datetime import datetime
-
 import os
 import json
-from unicodedata import name
-
 import hashlib
+import datetime
 
 from flask import Flask, render_template, request, url_for, redirect, Response
 from dotenv import load_dotenv
@@ -12,8 +9,6 @@ from .gmail.gmail import send_email
 from peewee import *
 from playhouse.shortcuts import model_to_dict
 
-
-import datetime
 
 load_dotenv()
 app = Flask(__name__)
@@ -24,7 +19,6 @@ mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
                      host=os.getenv("MYSQL_HOST"),
                      port=3306
                      )
-
 print(mydb)
 
 
@@ -45,9 +39,6 @@ data = 0
 filename = os.path.join(app.static_folder, 'data.json')
 with open(filename) as f:
     data = json.load(f)
-
-
-
 
 
 @app.route("/", defaults={"name": "justin"})
@@ -99,13 +90,13 @@ def get_timeline_post():
 
 
 @app.route('/api/timeline_post/<id>', methods=['GET'])
-def get_ids(id):
+def get_specific_timeline_post(id):
     try:
         post = TimelinePost.get_by_id(id)
-    
+
     except TimelinePost.DoesNotExist:
         return Response("Timeline post not found", 404)
-        
+
     else:
         return model_to_dict(post)
 
@@ -113,48 +104,23 @@ def get_ids(id):
 @app.route('/api/timeline_post/<id>', methods=['DELETE'])
 def delete_timeline_post(id):
     TimelinePost.delete_by_id(id)
-    # for p in TimelinePost.select():
-    #     print(p.id, p.content)
-    # return "<p>Hello World</p>"
     return Response("Successfully deleted {}".format(id), 200)
 
 
-@app.route('/timeline', defaults={"name": "justin"}, methods=["GET"])
+@app.route('/timeline', defaults={"name": "justin"})
 def timeline(name):
 
-    if request.method == "POST":
-        form_name = request.form['name']
-        form_email = request.form['email']
-        form_content = request.form['content']
-
-        # print(form_name, form_email, form_content)
-        TimelinePost.insert(name=form_name, email=form_email, content=form_content).execute()
-
-        return redirect(url_for('timeline'))
-
-
-    posts = [model_to_dict(p) for p in TimelinePost.select().order_by(TimelinePost.created_at.desc())]
+    posts = [model_to_dict(p) for p in TimelinePost.select().order_by(
+        TimelinePost.created_at.desc())]
 
     return render_template('pages/timeline.html', title=name, url=os.getenv("URL"), posts=posts, data=data)
 
-# curl --request POST http://localhost:5000/api/timeline_post -d 'name=Justin&email=justin.monteza@gmail.com&content=Just Added Database to my portfolio site!'
-
-# curl -X POST http://localhost:5000/api/timeline_post -d 'name=Justin&email=justin.monteza@gmail.com&content=Testing my endpoints with postman and curl.'
-
-# curl http://localhost:5000/api/timeline_post
 
 @app.template_global()
 def get_gravatar_url(email):
 
-    # Set your variables here
-    # email = "justin.monteza@gmail.com"
-    # default = "https://www.example.com/default.jpg"
-    # size = 40
-
-    # construct the url
+    # Construct the gravatar url
     gravatar_url = "https://www.gravatar.com/avatar/" + \
         hashlib.md5(email.lower().encode('utf-8')).hexdigest()
-# gravatar_url += urllib.parse.urlencode({'d':default, 's':str(size)})
-    return gravatar_url
 
-# print(gravatar_url)
+    return gravatar_url
