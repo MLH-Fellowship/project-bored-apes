@@ -17,5 +17,3 @@ systemctl daemon-reload
 
 # Restart myportfolio service
 systemctl restart myportfolio
-
-
