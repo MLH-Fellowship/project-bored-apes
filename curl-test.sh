@@ -4,7 +4,7 @@
 content=$(curl -s http://asdfast.beobit.net/api/ | jq -r '.["text"]')
 
 # Post data with name, email, and random lorem ipsum content
-id=$(curl -s --request POST http://localhost:5000/api/timeline_post -d "name=Justin&email=justin.monteza@gmail.com&content=$(echo "$content")" | jq -r '.["id"]')
+id=$(curl -s -X POST http://localhost:5000/api/timeline_post -d "name=Justin&email=justin.monteza@gmail.com&content=$(echo "$content")" | jq -r '.["id"]')
 
 # Get the post we just added using its id
 check=$(curl -s http://localhost:5000/api/timeline_post | jq -r '[.["timeline_posts"][] | .id] | @sh' | grep $id)
