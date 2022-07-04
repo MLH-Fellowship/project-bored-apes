@@ -103,7 +103,7 @@ class AppTestCase(unittest.TestCase):
         self.assertTrue(response.is_json)
 
         # Check the timeline page using GET
-        response = self.client.get("/timeline/")
+        response = self.client.get("/timeline")
 
         # Must be an HTML response
         self.assertEqual(response.mimetype, 'text/html')
