@@ -1,6 +1,7 @@
 # tests/test_app.py
 
 import unittest
+import requests
 import os
 os.environ['TESTING'] = 'true'
 
@@ -38,21 +39,17 @@ class AppTestCase(unittest.TestCase):
         assert response.is_json
         json = response.get_json()
         assert "timeline_posts" in json
-        assert len(json["timeline_posts"]) == 0
-
-        self.assertIn("<!DOCTYPE html>", html)
-        self.assertIn("head", html)
-        self.assertIn('link', html)
-        self.assertIn('header', html)
 
     def test_post(self):
 
         # Testing POST method of /api/timeline_post
 
         # Generate information for the timeline post
-        name = generate_random_name()
-        email = generate_random_email(name)
-        content = generate_random_content()
+        nameRequest = requests.get("https://api.namefake.com/american/male")
+        name = nameRequest.json()['name']
+        email =  '_'.join(name.lower().split()) + "@gmail.com" 
+        contentRequest = requests.get("https://asdfast.beobit.net/api/")
+        content = contentRequest.json()['text']
 
         response = self.client.post("/api/timeline_post", data={
             "name": name,
@@ -86,9 +83,11 @@ class AppTestCase(unittest.TestCase):
     def test_timeline_page(self):
 
         # Generate information for the timeline post
-        name = generate_random_name()
-        email = generate_random_email(name)
-        content = generate_random_content()
+        nameRequest = requests.get("https://api.namefake.com/american/male")
+        name = nameRequest.json()['name']
+        email =  '_'.join(name.lower().split()) + "@gmail.com" 
+        contentRequest = requests.get("https://asdfast.beobit.net/api/")
+        content = contentRequest.json()['text']
 
         # Add a timeline post
         response = self.client.post("/api/timeline_post", data={
@@ -108,9 +107,6 @@ class AppTestCase(unittest.TestCase):
 
         # Must be an HTML response
         self.assertEqual(response.mimetype, 'text/html')
-
-        # Must return a status code of 200
-        self.assertEqual(response.status_code, 200)
 
         # Get a string representation of the request body
         html = response.get_data(as_text=True)
