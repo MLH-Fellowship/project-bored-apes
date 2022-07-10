@@ -1,0 +1,23 @@
+<form id="form">
+    <input name="name" type="text">
+    <input name="email"type="text">
+    <input name="content"type="text">
+    <button type="submit">Submit</button>
+</form> 
+<div id="words">
+Before    
+</div>
+
+<script>
+    function addSubmit(ev) {
+      ev.preventDefault();
+      fetch('/api/timeline_post', {
+        method: 'POST',
+        body: new FormData(this)
+      })
+    }
+    
+    
+    var form = document.getElementById('form');
+    form.addEventListener('submit', addSubmit);
+</script>

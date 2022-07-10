@@ -58,6 +58,11 @@ def contact():
         send_email(receiver_name, receiver_email, subject, formatted_message)
         send_email(sender_name, sender_email, "Email Confirmation", formatted_confirmation)
         return '', 204
+#hi
+@app.route('/timeline')
+def timeline():
+    return render_template('pages/timeline.html', title="Timeline")
+
 
 
 @app.errorhandler(404)
