@@ -1,0 +1,99 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+<div class="container is-fluid">
+    <div class="columns is-centered">
+        <div class="column is-three-quarters">
+            <div class="box">
+                <h1 class="title">Add to Timeline</h1>
+                <form id="form" method="post">
+                    <div class="field">
+                        <div class="control has-icons-left has-icons-right">
+                            <input name="name" class="input is-medium" type="text" placeholder="John Doe">
+                            <span class="icon is-medium is-left">
+                            <i class="fas fa-user"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control has-icons-left has-icons-right">
+                            <input name="email" class="input is-medium" type="email" placeholder="email@address.com">
+                            <span class="icon is-medium is-left">
+                            <i class="fas fa-envelope"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <textarea name="content" class="textarea is-medium" placeholder="Content"></textarea>
+                        </div>
+                    </div>
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button type="submit" class="button is-link">Submit</button>
+                        </div>
+                        <div class="control">
+                            <button type="reset" onClick="resetForm()" class="button is-link is-light">Clear</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <h1 class="title is-1 has-text-centered">{{posts|length}} Timeline Posts</h1>
+    {% for post in posts %}
+    <div class="columns is-centered">
+        <div class="column is-three-quarters">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        {{post.created_at.strftime("%b %d, %Y (%I:%M:%S %p)" )}}
+                    </p>
+                </header>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-64x64">
+                                <img src="{{get_gravatar_url(post.email)}}" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4">{{post.name}}</p>
+                            <p class="subtitle is-6">{{post.email}}</p>
+                        </div>
+                    </div>
+                    <p class="subtitle">
+                        {{post.content}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<script>
+    function addSubmit(ev) {
+      ev.preventDefault();
+      fetch('/api/timeline_post', {
+        method: 'POST',
+        body: new FormData(this)
+      })
+        .catch(error => {
+            console.log("Error")
+        })
+        .finally(() => location.reload());
+    }
+    
+    function parseJSON(response) {
+      console.log(response)
+      return response.json();
+    }
+    
+    function resetForm(){
+        document.getElementById('form').reset();
+    }
+    
+    var form = document.getElementById('form');
+    form.addEventListener('submit', addSubmit);
+    
+</script>
+{% endblock %}
